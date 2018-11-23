@@ -5,3 +5,4 @@
 - copy project and solution files to Raspberry PI
 - dotnet build <name>.csproj
 - dotnet build <name>.sln
+- Steps to load the SDK are [here](https://www.leowkahman.com/2017/07/16/running-dotnet-core-on-raspberry-pi-raspbian/)
