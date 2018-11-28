@@ -28,3 +28,11 @@
   ```
   mosquito -c <config-file> -v
   ```
+* Stop Mosquitto
+  ```
+  sudo service stop mosquitto
+  ```
+* Start Mosquitto
+  ```
+  sudo service start mosquitto
+  ```
