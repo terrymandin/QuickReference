@@ -36,3 +36,6 @@
   ```
   sudo service start mosquitto
   ```
+## Updating the configuration file
+
+* The configuration file is located here: /etc/mosquitto/mosquitto.conf
