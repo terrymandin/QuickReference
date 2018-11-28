@@ -2,5 +2,6 @@
 
 - Find
   ```
-  find . -name file.ext
+  find . -type f -name file.ext
+  find . -type f -exec grep "example" '{}' \; -print
   ```
