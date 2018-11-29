@@ -65,7 +65,7 @@ log_type debug
 address tm-iot-hub-free.azure-devices.net:8883
 remote_username tm-iot-hub-free.azure-devices.net/Mosquitto
 # remote_username Mosquitto
-remote_password SharedAccessSignature sr=<iot-hub>.azure-devices.net%2Fdevices%2F<device-di>&sig=<key>=1574965068
+remote_password SharedAccessSignature sr=<iot-hub>.azure-devices.net%2Fdevices%2F<device-id>&sig=<key>=1574965068
 remote_clientid Mosquitto
 bridge_cafile /etc/ssl/certs/DigiCertBaltimoreRoot.crt
 try_private false
@@ -76,5 +76,6 @@ bridge_protocol_version mqttv311
 bridge_tls_version tlsv1
 notifications false
 notification_topic events/
-topic # out 0 devices/<device-di>/messages/events/ devices/<device-di>/messages/events/
-topic # in 0 devices/<device-di>/messages/devicebound/ devices/<device-di>/messages/devicebound/
+topic # out 0 devices/<device-id>/messages/events/ devices/<device-id>/messages/events/
+topic # in 0 devices/<device-id>/messages/devicebound/ devices/<device-id>/messages/devicebound/
+```
