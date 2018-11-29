@@ -39,6 +39,7 @@
 ## Updating the configuration file
 
 * The configuration file is located here: /etc/mosquitto/mosquitto.conf
+* Baltimore Certificate is located [here](https://ssl-tools.net/certificates/d4de20d05e66fc53fe1a50882c78db2852cae474.pem).  Rename it to DigiCertBaltimoreRoot.crt and place it in /etc/ssl/certs/
 
 ```
 # Place your local configuration in /etc/mosquitto/conf.d/
