@@ -56,7 +56,8 @@ include_dir /etc/mosquitto/conf.d
 connection iothub-bridge
 log_type debug
 address tm-iot-hub-free.azure-devices.net:8883
-remote_username tm-iot-hub-free.azure-devices.net/Mosquitto
+# the following setting is case sensitive
+remote_username tm-iot-hub-free.azure-devices.net/<device-id> 
 # remote_username Mosquitto
 remote_password SharedAccessSignature sr=<iot-hub>.azure-devices.net%2Fdevices%2F<device-id>&sig=<key>=1574965068
 remote_clientid Mosquitto
