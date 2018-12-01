@@ -9,7 +9,7 @@
 * Logs
   * [QuickStart](https://docs.microsoft.com/en-us/azure/log-analytics/query-language/get-started-analytics-portal)
   * Queries can start with either a table name or a search command
-  * <shift><enter> to run queries
+  * ```<shift><enter>``` to run queries
   * Sample queries.  Pipe or Search formats.  The following are equivilant
     ```
     Event | search "error"
