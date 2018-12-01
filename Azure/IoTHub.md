@@ -12,3 +12,11 @@
     ```
     az extension add --name azure-cli-iot-ext
     ```
+  * Login
+    ```
+    az --login
+    ```
+  * Set Subscription
+    ```
+    az account set -s <subscription-id>
+    ```
