@@ -15,7 +15,7 @@
     Event | search "error"
     search in (Event) "error"
     ```
-  * CLI Deployment of Azure Monitoring
+  * CLI Deployment of Azure Monitoring (not working)
   ```
   az vm extension set \
   --resource-group myResourceGroup \
@@ -25,6 +25,9 @@
   --version 1.7 --protected-settings '{"workspaceKey": "omskey"}' \
   --settings '{"workspaceId": "omsid"}'
   ```
-    
-      
+  * Add entension with wget [link](https://docs.microsoft.com/en-us/azure/log-analytics/log-analytics-quick-collect-linux-computer)  
+  ```
+  wget https://raw.githubusercontent.com/Microsoft/OMS-Agent-for-Linux/master/installer/scripts/onboard_agent.sh && sh onboard_agent.sh -w <YOUR WORKSPACE ID> -s <YOUR WORKSPACE PRIMARY KEY>
+  sudo /opt/microsoft/omsagent/bin/service_control restart [<workspace id>]
+  ```
     
