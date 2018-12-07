@@ -20,15 +20,15 @@
     Perf
     ```
   * CLI Deployment of Azure Monitoring (not working)
-  ```
-  az vm extension set \
-  --resource-group myResourceGroup \
-  --vm-name myVM \
-  --name OmsAgentForLinux \
-  --publisher Microsoft.EnterpriseCloud.Monitoring \
-  --version 1.7 --protected-settings '{"workspaceKey": "omskey"}' \
-  --settings '{"workspaceId": "omsid"}'
-  ```
+    ```
+    az vm extension set \
+    --resource-group myResourceGroup \
+    --vm-name myVM \
+    --name OmsAgentForLinux \
+    --publisher Microsoft.EnterpriseCloud.Monitoring \
+    --version 1.7 --protected-settings '{"workspaceKey": "omskey"}' \
+    --settings '{"workspaceId": "omsid"}'
+    ```
   * Linux install [here](https://docs.microsoft.com/en-us/azure/log-analytics/log-analytics-quick-collect-linux-computer)  
     * only one per Linux computer
   * Windows install [here](https://docs.microsoft.com/en-gb/azure/azure-monitor/learn/quick-collect-windows-computer)
