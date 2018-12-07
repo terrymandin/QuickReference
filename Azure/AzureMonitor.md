@@ -15,6 +15,10 @@
     Event | search "error"
     search in (Event) "error"
     ```
+    or
+    ```
+    Perf
+    ```
   * CLI Deployment of Azure Monitoring (not working)
   ```
   az vm extension set \
