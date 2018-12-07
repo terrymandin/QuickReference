@@ -25,9 +25,6 @@
   --version 1.7 --protected-settings '{"workspaceKey": "omskey"}' \
   --settings '{"workspaceId": "omsid"}'
   ```
-  * Add entension with wget [link](https://docs.microsoft.com/en-us/azure/log-analytics/log-analytics-quick-collect-linux-computer)  
-  ```
-  wget https://raw.githubusercontent.com/Microsoft/OMS-Agent-for-Linux/master/installer/scripts/onboard_agent.sh && sh onboard_agent.sh -w <YOUR WORKSPACE ID> -s <YOUR WORKSPACE PRIMARY KEY>
-  sudo /opt/microsoft/omsagent/bin/service_control restart [<workspace id>]
-  ```
-    
+  * Linux install [here](https://docs.microsoft.com/en-us/azure/log-analytics/log-analytics-quick-collect-linux-computer)  
+    * only one per Linux computer
+  * Windows install [here](https://docs.microsoft.com/en-gb/azure/azure-monitor/learn/quick-collect-windows-computer)
