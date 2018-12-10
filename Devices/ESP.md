@@ -34,7 +34,7 @@ ls -l /dev/tty*
 
 * Deploy
 ```
-make -j4 flash ESPPORT=COM<port-number>
+make -j4 flash ESPPORT=COM<port-number> <monitor>
 ```
 
 ## Work in progress, finished here
