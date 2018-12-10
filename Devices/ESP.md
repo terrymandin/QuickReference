@@ -17,6 +17,7 @@ export IDF_PATH=~/esp/esp-idf
 
 ## Installation (Windows)
 
+* [Reference](https://github.com/espressif/esp-idf/blob/master/README.md)
 * Open ```C:\msys32\home\temandin\.bash_profile``` in Notepad.  Add the following:
 
 ```
