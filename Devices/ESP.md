@@ -32,6 +32,11 @@ export IDF_PATH="C:/msys32/home/<user-name>/esp/esp-idf"
 ls -l /dev/tty*
 ```
 
+* Deploy
+```
+make flash ESPPORT=COM13
+```
+
 ## Work in progress, finished here
 [A MQTT Demo that Connects ESP device to Azure Cloud](https://github.com/espressif/esp-azure) Step 5
 [Espressif IoT Development Framework](https://github.com/espressif/esp-idf/blob/master/README.md) Getting Started Guide for the stable ESP-IDF version
