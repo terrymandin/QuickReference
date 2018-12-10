@@ -34,7 +34,7 @@ ls -l /dev/tty*
 
 * Deploy
 ```
-make flash ESPPORT=COM13
+make flash ESPPORT=COM<port-number>
 ```
 
 ## Work in progress, finished here
