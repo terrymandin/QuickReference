@@ -32,6 +32,8 @@ export IDF_PATH="C:/msys32/home/<user-name>/esp/esp-idf"
 ```
 ls -l /dev/tty*
 ```
+* Go to make menuconfig -> Example configuration to configure your Azure IOT Hub Device Connection String, Wi-Fi SSID and Password;
+* Go to make menuconfig -> Serial flasher config to configure you serial port.
 
 * Deploy
 ```
