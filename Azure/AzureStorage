@@ -1,0 +1,8 @@
+# Terry's Azure Storage Quick Reference
+
+* Limit access to blobs to certain VMs
+  * Create a Virtual Network
+  * Create a Storage Account in the Virtual Network
+  * Create a VM in the Virtual Network
+  * Log into the VM
+  * Add, remove or read files from the storage account
