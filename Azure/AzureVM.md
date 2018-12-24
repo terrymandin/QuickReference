@@ -33,5 +33,5 @@
   ```
 * Delete a VM
   ```
-  az vm delete --no-wait -y --resource-group TMTraining --name TMTestARMDeploy > out2.txt 
+  az vm delete --no-wait -y --resource-group <resource-group> --name <VM-name> 
   ```
