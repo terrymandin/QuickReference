@@ -5,3 +5,7 @@
   ```
   az account list-locations |findstr "displayName"
   ```
+  * List Resources in Resource Group
+  ```
+  az resource list -g <resource-group> -o table
+  ```
