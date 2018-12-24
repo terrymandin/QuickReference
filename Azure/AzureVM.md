@@ -1,4 +1,4 @@
-# Terry's VM Quick Reference
+# Terry's Azure VM Quick Reference
 
 * See available images
   ``` 
