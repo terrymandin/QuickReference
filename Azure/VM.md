@@ -31,3 +31,7 @@
     --admin-username <username> \
     --admin-password '<Password>'
   ```
+* Delete a VM
+  ```
+  az vm delete --no-wait -y --resource-group TMTraining --name TMTestARMDeploy > out2.txt 
+  ```
