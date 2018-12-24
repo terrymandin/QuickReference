@@ -12,15 +12,22 @@
   ```
   az vm image list --all --publisher canonical -o table
   ```
+* List SKUs
+  ```
+  az vm image list-skus --location westus --publisher Canonical --offer UbuntuServer --output table
+  ```
+* List Images
+  ```
+  az vm image list --location westus --publisher Canonical --offer UbuntuServer --sku 16.04-LTS --all --output table
+  ```
 * Create a VM (bash)
   ```
-  ResourceGroupName=TMTraining
-  VMName=TMUbuntuVM
-  AdminPassword==123!@#Pass
+  ResourceGroupName='<resource-group>'
+  VMName=<VM-name>
   az vm create \
     --resource-group $ResourceGroupName \
     --name $VMName \
-    --image win2016datacenter \
-    --admin-username azureuser \
-    --admin-password $AdminPassword
+    --image Canonical:UbuntuServer:16.04-LTS:16.04.201812230 \
+    --admin-username <username> \
+    --admin-password '<Password>'
   ```
