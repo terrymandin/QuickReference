@@ -12,3 +12,15 @@
   ```
   az vm image list --all --publisher canonical -o table
   ```
+* Create a VM (bash)
+  ```
+  ResourceGroupName=TMTraining
+  VMName=TMUbuntuVM
+  AdminPassword==123!@#Pass
+  az vm create \
+    --resource-group $ResourceGroupName \
+    --name $VMName \
+    --image win2016datacenter \
+    --admin-username azureuser \
+    --admin-password $AdminPassword
+  ```
