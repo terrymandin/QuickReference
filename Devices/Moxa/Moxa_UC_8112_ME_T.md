@@ -2,7 +2,7 @@
 
 ## Configure Moxa device to be DHCP on LAN 1 ([link](https://wiki.debian.org/NetworkConfiguration#Using_DHCP_to_automatically_configure_the_interface))
 
-```
+```bash
 cp /etc/network/interfaces /etc/network/interfaces.bu
 vi /etc/network/interfaces
 ```
@@ -13,7 +13,7 @@ Update the ip address of either eth0 or eth1 appropriately
 ### DHCP 
 
 Add the following:
-```
+```bash
 auto eth0
 allow-hotplug eth0
 iface eth0 inet dhcp
