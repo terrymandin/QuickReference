@@ -33,7 +33,7 @@ As Debian 8 is not a supported OS for the default install, further steps are req
 * Download this [file](/Devices/Moxa/iotedged-debian8-arm32v7.zip) to your computer.  To get the latest release, you will need to pull the IoT Edge code and recompile.
 * Unzip the file and copy the .deb files to the Moxa device
 * Run the following commands on the Moxa device.  When prompted, overwrite the "config.yaml" file.
-  ```
+  ```bash
   sudo dpkg -i iotedge_1.0.5-1_armhf.deb
   sudo apt-get install -f
   sudo dpkg -i libiothsm-std_1.0.519373176-1_armhf.deb
@@ -41,18 +41,18 @@ As Debian 8 is not a supported OS for the default install, further steps are req
   ```
 * Update "config.yaml" with your connections string again.
 * Restart IoT Edge
-  ```
+  ```bash
   sudo systemctl restart iotedge
   ```
 * Check IoT Edge status
-  ```
+  ```bash
   systemctl status iotedge
   ```
 * Check IoT Edge logs.  There should be no errors.
-  ```
+  ```bash
   journalctl -u iotedge --no-pager --no-full
   ```
 * Check that the Edge agent is running
-  ```
+  ```bash
   sudo iotedge list
   ```
