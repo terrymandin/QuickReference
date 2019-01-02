@@ -27,6 +27,9 @@ Add the following:
 allow-hotplug eth0
 iface eth0 inet dhcp
 ```
+
+To get the DHCP IP address you will need to log in on the static IP address. I used a spare WIFI router I had lying around to do this.  Don't configure both ports to use DHCP or you won't be able to get the address.
+
 ## Install IoT Edge on Moxa device
 
 Install curl
