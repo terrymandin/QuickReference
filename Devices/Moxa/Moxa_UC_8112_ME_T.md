@@ -1,4 +1,4 @@
-# Terry's Modbus Quick Reference for installing IoT Edge on a Moxa-8112-ME-T device
+# Terry's Quick Reference for installing IoT Edge on a Moxa-8112-ME-T device
 
 ## Configure Moxa device to be DHCP on LAN 1 
 
