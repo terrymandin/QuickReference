@@ -48,7 +48,7 @@ As Debian 8 is not a supported OS for the default install, further steps are req
   sudo dpkg -i libiothsm-std_1.0.519373176-1_armhf.deb
   sudo apt-get install -f
   ```
-* Update "config.yaml" with your connections string again.
+* Update "config.yaml" with your connection string again.
 * Restart IoT Edge
   ```bash
   sudo systemctl restart iotedge
