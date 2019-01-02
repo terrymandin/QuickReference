@@ -1,5 +1,19 @@
 # Terry's Modbus Quick Reference
 
+## Configure Moxa device to be DHCP on LAN 1
+
+```
+cp /etc/network/interfaces /etc/network/interfaces.bu
+vi /etc/network/interfaces
+```
+
+Add the following:
+```
+auto eth0
+allow-hotplug eth0
+iface eth0 inet dhcp
+```
+
 ## Create Resource Group
 
 az group create -l <location> -n <resourceGroupName>
