@@ -21,7 +21,7 @@ apt-get update
 apt-get install curl
 ```
 
-Follow these [steps](https://docs.microsoft.com/en-us/azure/iot-edge/how-to-install-iot-edge-linux-arm).  
+Follow these steps: [Install Azure IoT Edge runtime on Linux (ARM32v7/armhf)](https://docs.microsoft.com/en-us/azure/iot-edge/how-to-install-iot-edge-linux-arm).  
 
 As Debian 8 is not a supported OS for the default install, further steps are required.
 
