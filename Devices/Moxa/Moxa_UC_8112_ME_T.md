@@ -12,9 +12,18 @@ Update the ip address of either eth0 or eth1 appropriately
 
 ### DHCP 
 
+Comment out these lines:
+
+```
+#iface eth0 inet static
+#        address 192.168.3.127
+#        network 192.168.3.0
+#        netmask 255.255.255.0
+#        broadcast 192.168.3.255
+```
+
 Add the following:
-```bash
-auto eth0
+```
 allow-hotplug eth0
 iface eth0 inet dhcp
 ```
