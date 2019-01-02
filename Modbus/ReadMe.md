@@ -1,6 +1,6 @@
 # Terry's Modbus Quick Reference
 
-## Configure Moxa device to be DHCP on LAN 1
+## Configure Moxa device to be DHCP on LAN 1 ([link](https://wiki.debian.org/NetworkConfiguration#Using_DHCP_to_automatically_configure_the_interface))
 
 ```
 cp /etc/network/interfaces /etc/network/interfaces.bu
