@@ -6,6 +6,11 @@
 cp /etc/network/interfaces /etc/network/interfaces.bu
 vi /etc/network/interfaces
 ```
+### Static IP
+
+Update the ip address of either eth0 or eth1 appropriately
+
+### DHCP 
 
 Add the following:
 ```
@@ -25,3 +30,4 @@ Follow these steps: [Install Azure IoT Edge runtime on Linux (ARM32v7/armhf)](ht
 
 As Debian 8 is not a supported OS for the default install, further steps are required.
 
+Download this file to your computer: 
