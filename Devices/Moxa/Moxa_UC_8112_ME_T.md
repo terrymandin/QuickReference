@@ -30,4 +30,4 @@ Follow these steps: [Install Azure IoT Edge runtime on Linux (ARM32v7/armhf)](ht
 
 As Debian 8 is not a supported OS for the default install, further steps are required.
 
-* Download this file to your computer.  To get the latest release, you will need to pull the IoT Edge code and recompile.
+* Download this [file](/QuickReference/Devices/Moxa/iotedged-debian8-arm32v7.zip) to your computer.  To get the latest release, you will need to pull the IoT Edge code and recompile.
