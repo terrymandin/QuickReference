@@ -13,6 +13,15 @@ auto eth0
 allow-hotplug eth0
 iface eth0 inet dhcp
 ```
+## Install IoT Edge on Moxa device
+
+Install curl
+```
+apt-get update
+apt-get install curl
+```
+
+Follow these [steps](https://docs.microsoft.com/en-us/azure/iot-edge/how-to-install-iot-edge-linux-arm).
 
 ## Create Resource Group
 
