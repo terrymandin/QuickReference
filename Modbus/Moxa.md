@@ -1,4 +1,4 @@
-# Terry's Modbus Quick Reference
+# Terry's Modbus Quick Reference for installing IoT Edge on a Moxa-8112-ME-T device
 
 ## Configure Moxa device to be DHCP on LAN 1 ([link](https://wiki.debian.org/NetworkConfiguration#Using_DHCP_to_automatically_configure_the_interface))
 
@@ -21,7 +21,12 @@ apt-get update
 apt-get install curl
 ```
 
-Follow these [steps](https://docs.microsoft.com/en-us/azure/iot-edge/how-to-install-iot-edge-linux-arm).
+Follow these [steps](https://docs.microsoft.com/en-us/azure/iot-edge/how-to-install-iot-edge-linux-arm).  
+
+As Debian 8 is not a supported OS for the default install, further steps are required.
+
+
+
 
 ## Create Resource Group
 
