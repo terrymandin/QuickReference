@@ -1,6 +1,6 @@
 # Terry's Modbus Quick Reference for installing IoT Edge on a Moxa-8112-ME-T device
 
-## Configure Moxa device to be DHCP on LAN 1 ([link](https://wiki.debian.org/NetworkConfiguration#Using_DHCP_to_automatically_configure_the_interface))
+## Configure Moxa device to be DHCP on LAN 1 
 
 ```bash
 cp /etc/network/interfaces /etc/network/interfaces.bu
@@ -10,7 +10,7 @@ vi /etc/network/interfaces
 
 Update the ip address of either eth0 or eth1 appropriately
 
-### DHCP 
+### DHCP ([link](https://wiki.debian.org/NetworkConfiguration#Using_DHCP_to_automatically_configure_the_interface))
 
 Comment out these lines:
 
