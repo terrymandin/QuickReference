@@ -16,7 +16,9 @@ iface eth0 inet dhcp
 
 ## Create Resource Group
 
+```
 az group create -l <location> -n <resourceGroupName>
+```
 
 ## Create VM's
 
