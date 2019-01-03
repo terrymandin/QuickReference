@@ -40,6 +40,12 @@ apt-get install curl
 
 Follow these steps: [Install Azure IoT Edge runtime on Linux (ARM32v7/armhf)](https://docs.microsoft.com/en-us/azure/iot-edge/how-to-install-iot-edge-linux-arm).  <b>Note that IoT Edge will not start up as per these instructions.  Steps below will resolve the issue.</b>
 
+Update the config.yaml file as follows
+
+```
+hostname: "<IoTHubName>.azure-devices.net"
+```
+
 As Debian 8 is not a supported OS for the default install, further steps are required.
 
 * Download this [file](/Devices/Moxa/iotedged-debian8-arm32v7.zip) to your computer.  To get the latest release, you will need to pull the IoT Edge code and recompile.
