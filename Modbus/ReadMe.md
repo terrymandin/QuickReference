@@ -12,7 +12,7 @@ az group create -l <location> -n <resourceGroupName>
 
 ### Modbus Simulator (Windows)
 
-[Simulator](http://www.simplymodbus.ca/RTUSlaveManual8.htm)
+[Simulator](http://www.winmodbus.com/new/)
 
 ### Edge (Linux)
 
