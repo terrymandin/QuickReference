@@ -66,7 +66,7 @@ Content-Type    application/json
 
 - Enter the following command to start monitoring your IoT Hub for incoming messages
   ```
-  az iot hub monitor-events -n <
+  az iot hub monitor-events -n <IoT Hub>
   ```
 
 ### Make request
