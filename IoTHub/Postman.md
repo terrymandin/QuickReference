@@ -16,7 +16,7 @@
 - Open the [Azure Portal](https://ms.portal.azure.com)
 - Click on "IoT Devices"
 - Click on "+ Add"
-- Enter the name in "Device Id".  This will be referred to as <device-id> later in this document
+- Enter the name in "Device Id".  This will be referred to as ```<device-id>``` later in this document
 - Click "Save"
 
 ## Generate SAS Token
