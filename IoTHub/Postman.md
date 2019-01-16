@@ -2,7 +2,7 @@
 
 ## Prerequisites
 
-- A IoT Hub
+- An IoT Hub
 - Azure CLI
   - Follow these steps to install the Azure CLI: [Install the Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest)
   - Install the IoT Extension
