@@ -24,7 +24,7 @@
 - Open a command prompt
 - Enter the az command line to generate a SAS token for a device
   ```
-  az iot hub generate-sas-token --device-id <device-id> --duration 2592000 --hub-name TMIoTHub
+  az iot hub generate-sas-token --device-id <device-id> --duration 2592000 --hub-name <iot hub name>
   ```
 - Save the SAS token for later.  It will look like this:
   ```
