@@ -31,3 +31,7 @@ az vm create \
   --admin-username <username> \
   --admin-password '<Password>'
 ```
+
+### Configure Module
+
+- [Module Documentation](https://docs.microsoft.com/en-gb/azure/iot-edge/deploy-modbus-gateway)
