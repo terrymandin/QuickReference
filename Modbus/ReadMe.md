@@ -13,6 +13,7 @@ az group create -l <location> -n <resourceGroupName>
 ### Modbus Simulator (Windows)
 
 [Simulator](http://www.winmodbus.com/new/)
+[Easy Modbus](https://sourceforge.net/projects/easymodbustcp/)
 
 ### Edge (Linux)
 
