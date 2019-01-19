@@ -14,6 +14,7 @@ az group create -l <location> -n <resourceGroupName>
 
 - [Simulator](http://www.winmodbus.com/new/)
 - [Easy Modbus](https://sourceforge.net/projects/easymodbustcp/)
+- [dotnet](https://dotnet.microsoft.com/download/thank-you/dotnet-sdk-2.2.101-linux-x64-binaries)
 
 ### Edge (Linux)
 
