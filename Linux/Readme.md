@@ -17,8 +17,8 @@
   ```
   mount |grep /dev/mmcblk0p1
   umount /mnt/sd-mmcblk0p1
-	mkfs.ext4 -m 0 -L sdcard /dev/mmcblk0p1
-	mkdir /mnt/SD
-	mount -t ext4 /dev/mmcblk0p1 /mnt/SD
-	Update /etc/docker/daemon.json file
+  mkfs.ext4 -m 0 -L sdcard /dev/mmcblk0p1
+  mkdir /mnt/SD
+  mount -t ext4 /dev/mmcblk0p1 /mnt/SD
+  Update /etc/docker/daemon.json file
   ```
