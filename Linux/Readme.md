@@ -11,5 +11,5 @@
   ```
   Top 10 directories by disk space
   ```
-  /media/sd-mmcblk0p1/uc8100a_iotinaction_19030714_resize.img
+  du -a / | sort -n -r | head -n 10
   ```
