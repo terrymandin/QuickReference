@@ -13,7 +13,7 @@
   ```
   du -a / | sort -n -r | head -n 10
   ```
-- Append a SD card
+- Append a SD card, update docker to use SD card
   ```
   mount |grep /dev/mmcblk0p1
   umount /mnt/sd-mmcblk0p1
