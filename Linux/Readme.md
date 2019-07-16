@@ -22,3 +22,7 @@
   mount -t ext4 /dev/mmcblk0p1 /mnt/SD
   Update /etc/docker/daemon.json file
   ```
+- Diretory sizes
+```
+ du -h --max-depth=1 | sort -hr
+ ```
