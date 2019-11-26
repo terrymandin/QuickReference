@@ -26,3 +26,7 @@
 ```
  du -h --max-depth=1 | sort -hr
  ```
+- Clean Docker
+```
+docker system prune -a -f
+```
