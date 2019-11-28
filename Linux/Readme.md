@@ -13,6 +13,10 @@
   ```
   du -a / | sort -n -r | head -n 10
   ```
+  Files greater than a certain size
+  ```
+  find . -name *.gz -type f -size +1M -exec ls -l {} \;
+  ```
 - Append a SD card, update docker to use SD card
   ```
   mount |grep /dev/mmcblk0p1
