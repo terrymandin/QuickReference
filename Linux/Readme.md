@@ -34,3 +34,7 @@
 ```
 docker system prune -a -f
 ```
+- Export a variable
+```
+export <var>=<value>
+```
