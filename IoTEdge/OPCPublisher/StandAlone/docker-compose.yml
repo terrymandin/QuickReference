@@ -1,0 +1,19 @@
+version: '3.6'
+services:
+  opcpublisher:
+    command: publisher --pf=/appdata/pn.json
+    container_name: opcpublisher
+    environment:
+    - EdgeHubConnectionString=HostName=TMIoTHub.azure-devices.net;DeviceId=OPCPubInDocker;SharedAccessKey=/arzMG+XTmd90EY+JSQKJPO3TH6+lyDT1Ra232uUmdg=
+    expose:
+    - 62222/tcp
+    hostname: publisher
+    image: mcr.microsoft.com/iotedge/opc-publisher:latest
+    ports:
+    - 62222:62222/tcp
+    restart: always
+    volumes:
+    - /tmp/opcpub:/appdata
+volumes:
+  edgemoduledev:
+    name: edgemoduledev
