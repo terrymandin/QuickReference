@@ -1,1 +1,1 @@
-This shows how to setup a standalone OPC Publisher in Docker
+# Setup Standalone OPC Publisher in Docker
