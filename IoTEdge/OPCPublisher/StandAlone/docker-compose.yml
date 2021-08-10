@@ -4,7 +4,7 @@ services:
     command: publisher --pf=/appdata/pn.json
     container_name: opcpublisher
     environment:
-    - EdgeHubConnectionString=HostName=TMIoTHub.azure-devices.net;DeviceId=OPCPubInDocker;SharedAccessKey=/arzMG+XTmd90EY+JSQKJPO3TH6+lyDT1Ra232uUmdg=
+    - EdgeHubConnectionString=<connection string>
     expose:
     - 62222/tcp
     hostname: publisher
