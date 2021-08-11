@@ -69,5 +69,5 @@ docker -p <host port>:<container port> // map ports
 - [Install](https://github.com/helm/helm/releases)
 - Stable Repository
   ```
-  helm repo add stable https://kubernetes-charts.storage.googleapis.com/
+  helm repo add stable https://charts.helm.sh/stable
   ```
