@@ -1,0 +1,17 @@
+[
+  {
+    "EndpointUrl": "opc.tcp://192.168.1.87:50000/",
+    "UseSecurity": false,
+    "OpcNodes": [
+      {  "Id": "ns=2;s=FastUInt1"},
+      {  "Id": "ns=2;s=FastUInt2"},
+      {  "Id": "ns=2;s=FastUInt3"},
+      {  "Id": "ns=2;s=FastUInt4"},
+      {  "Id": "ns=2;s=FastUInt5"},
+      {  "Id": "ns=2;s=FastUInt6"},
+      {  "Id": "ns=2;s=FastUInt7"},
+      {  "Id": "ns=2;s=FastUInt8"},
+      {  "Id": "ns=2;s=FastUInt9"}
+    ]
+  }
+]

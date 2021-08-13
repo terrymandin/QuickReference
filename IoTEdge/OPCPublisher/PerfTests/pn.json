@@ -1,0 +1,11 @@
+[
+  {
+    "EndpointUrl": "opc.tcp://192.168.1.87:50000/",
+    "UseSecurity": false,
+    "OpcNodes": [
+      {
+        "Id": "ns=2;s=StepUp"
+      }
+    ]
+  }
+]
