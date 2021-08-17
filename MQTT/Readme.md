@@ -28,6 +28,10 @@
   ```
   mosquito -c <config-file> -v
   ```
+## Install Mosquitto Clients
+```
+sudo apt-get update && sudo apt-get install mosquitto-clients
+```
 
 ## Updating the configuration file
 
