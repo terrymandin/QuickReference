@@ -38,3 +38,7 @@ docker system prune -a -f
 ```
 export <var>=<value>
 ```
+- Enable SSH
+```
+sudo apt install openssh-server
+```
