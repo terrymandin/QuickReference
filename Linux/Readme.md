@@ -42,3 +42,8 @@ export <var>=<value>
 ```
 sudo apt install openssh-server
 ```
+- Open Ports
+```
+ufw enable
+ufw allow <port>
+```
