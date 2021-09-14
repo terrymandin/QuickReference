@@ -1,4 +1,4 @@
-Setup SFTP in an Edge Module
+# Setup SFTP in an Edge Module
 
 1. Image
    ```
