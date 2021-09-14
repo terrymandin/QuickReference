@@ -12,7 +12,7 @@
       ],
       "HostConfig": {
           "Binds": [
-              "<local directory>:/home/foo/upload"
+              "<host directory>:/home/foo/upload"
           ],
           "PortBindings": {
               "22/tcp": [
