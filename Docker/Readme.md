@@ -57,6 +57,7 @@ docker network rm <network name>
 docker stop <container>
 docker images -a
 docker rmi -f <image> <image>  // remove an image
+docker rmi -f $(docker images -q)
 docker -H "npipe:////./pipe/iotedge_moby_engine" <docker params on Mobi on Windows>
 docker inspect <friendly-name|container-id>
 docker search <name>
