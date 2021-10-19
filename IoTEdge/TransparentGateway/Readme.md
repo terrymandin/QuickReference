@@ -3,4 +3,4 @@
 - Remove all files from:
   - /var/lib/aziot/keyd/keys
   - /var/lib/aziot/certd/certs
-  - Test with Openssl s_client -showcerts -connect <FQDN>:8883
+  - Test with: ```Openssl s_client -showcerts -connect <FQDN>:8883```
