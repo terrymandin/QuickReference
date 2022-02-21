@@ -13,8 +13,8 @@
 3. In "Search" type in "Red Hat"
 4. Choose Red Hat v7.9
 
-# Steps
-
+## Steps
+### Install IoT Edge
 ```
 sudo su
 
@@ -29,10 +29,14 @@ sudo yum install moby-cli-3.0.10+azure-0.x86_64.rpm
 sudo yum install moby-engine-3.0.10+azure-0.x86_64.rpm
 sudo rpm -Uhv aziot-identity-service-1.2.4-1.x86_64.rpm
 sudo rpm -Uhv aziot-edge-1.2.5-1.el7.x86_64.rpm
+```
 
-# CONFIGURATION REQUIRED HERE
+### Configure IOT Edge
+```
 sudo iotedge config mp --connection-string 'PASTE_DEVICE_CONNECTION_STRING_HERE'
-
+```
+### Enable services
+```
 sudo systemctl enable aziot-edged.service
 sudo systemctl enable aziot-keyd.service
 sudo systemctl enable aziot-certd.service
