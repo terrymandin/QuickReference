@@ -13,6 +13,9 @@
 3. In "Search" type in "Red Hat"
 4. Choose Red Hat v7.9
 
+#### Configure "Edge" device in IoT Hub
+- Set edgeAgent and edgeHub to version 1.2
+
 ### Steps
 #### Install IoT Edge
 ```
