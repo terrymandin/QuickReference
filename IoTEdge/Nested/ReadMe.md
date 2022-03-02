@@ -9,7 +9,6 @@ trust_bundle_cert = "file:///IoTEdgeCerts/azure-iot-test-only.root.ca.cert.pem"
 source = "manual"
 connection_string = "HostName=<IoTHubName>.azure-devices.net;DeviceId=<DeviceName>;SharedAccessKey=<key>"
 
-
 [edge_ca]
 cert = "file:///IoTEdgeCerts/iot-edge-device-ca-<ParentDeviceName>-full-chain.cert.pem"
 pk = "file:///IoTEdgeCerts/iot-edge-device-ca-<ParentDeviceName>.key.pem"
