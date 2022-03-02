@@ -17,7 +17,7 @@ pk = "file:///IoTEdgeCerts/iot-edge-device-ca-<ParentDeviceName>.key.pem"
 
 ## Child TOML
 ```
-parent_hostname = "<IP Address>"
+parent_hostname = "<ParentIPAddress>"
 trust_bundle_cert = "file:///IoTEdgeCerts/azure-iot-test-only.root.ca.cert.pem"
 
 [agent.config]
