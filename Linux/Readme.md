@@ -47,3 +47,7 @@ sudo apt install openssh-server
 ufw enable
 ufw allow <port>
 ```
+- Watch the output of a linux command
+```
+watch iotedge list
+```
