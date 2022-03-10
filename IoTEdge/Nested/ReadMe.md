@@ -10,8 +10,8 @@ source = "manual"
 connection_string = "HostName=<IoTHubName>.azure-devices.net;DeviceId=<DeviceName>;SharedAccessKey=<key>"
 
 [edge_ca]
-cert = "file:///IoTEdgeCerts/iot-edge-device-ca-<ParentDeviceName>-full-chain.cert.pem"
-pk = "file:///IoTEdgeCerts/iot-edge-device-ca-<ParentDeviceName>.key.pem"
+cert = "file:///IoTEdgeCerts/iot-edge-device-ca-<CA cert name>-full-chain.cert.pem"
+pk = "file:///IoTEdgeCerts/iot-edge-device-ca-<CA cert name>.key.pem"
 ```
 
 ## Child TOML
@@ -27,6 +27,6 @@ source = "manual"
 connection_string = "HostName=<IoTHubName>.azure-devices.net;DeviceId=<DeviceName>;SharedAccessKey=<key>"
 
 [edge_ca]
-cert = "file:///IoTEdgeCerts/iot-edge-device-ca-<ChildDeviceName>-full-chain.cert.pem"
-pk = "file:///IoTEdgeCerts/iot-edge-device-ca-<ChildDeviceName>.key.pem"
+cert = "file:///IoTEdgeCerts/iot-edge-device-ca-<CA cert name>-full-chain.cert.pem"
+pk = "file:///IoTEdgeCerts/iot-edge-device-ca-<CA cert name>.key.pem"
 ```
