@@ -4,7 +4,7 @@
 - On the Device
   - sudo su
   - Create a directory on your device. eg. /etc/aziot/storage
-  - chown $( whoami ):iotedge /etc/aziot/storage/1. 
+  - chown $( whoami ):iotedge /etc/aziot/storage. 
   - chmod 775 /etc/iotedge/storage/
 - In IoT Hub in the portal
   - Go to your edge device
