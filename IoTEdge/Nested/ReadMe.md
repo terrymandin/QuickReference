@@ -1,5 +1,14 @@
 # Nested Edge Configuration
 
+[Kevin Hilcher's documentation](https://github.com/Azure/CertsForIoT-B)
+
+Use this command to test.  Look for SANS
+```
+echo | \
+    openssl s_client -connect 10.0.0.9:8883 2>/dev/null | \
+    openssl x509 -text
+```
+
 ## Parent TOML
 ```
 hostname = "<IPOfDevice>"
