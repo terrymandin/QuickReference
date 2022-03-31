@@ -9,6 +9,8 @@ echo | \
     openssl x509 -text
 ```
 
+This documentation sets things up for you: [Tutorial: Create a hierarchy of IoT Edge devices](https://docs.microsoft.com/en-us/azure/iot-edge/tutorial-nested-iot-edge?view=iotedge-2020-11)
+
 ## Parent TOML
 ```
 hostname = "<IPOfDevice>"
