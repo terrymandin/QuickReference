@@ -8,6 +8,11 @@ echo | \
     openssl s_client -connect 10.0.0.9:8883 2>/dev/null | \
     openssl x509 -text
 ```
+Make sure this is pointing to the parent's IP:
+```
+X509v3 Subject Alternative Name:
+DNS:iotedgeapiproxy, IP Address:20.81.164.227
+```
 
 This documentation sets things up for you: [Tutorial: Create a hierarchy of IoT Edge devices](https://docs.microsoft.com/en-us/azure/iot-edge/tutorial-nested-iot-edge?view=iotedge-2020-11)
 
