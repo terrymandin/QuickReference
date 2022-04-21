@@ -17,7 +17,7 @@
 - Set edgeAgent and edgeHub to version 1.2
 
 ### Steps
-#### Install IoT Edge
+#### Download files
 
 Option 1 - Use this option if "wget" is installed
 
@@ -40,8 +40,7 @@ curl -L https://packages.microsoft.com/centos/7/prod/moby-engine-3.0.13%2Bazure-
 curl -L https://github.com/Azure/azure-iotedge/releases/download/1.2.5/aziot-identity-service-1.2.4-1.x86_64.rpm -o aziot-identity-service-1.2.4-1.x86_64.rpm
 curl -L https://github.com/Azure/azure-iotedge/releases/download/1.2.5/aziot-edge-1.2.5-1.el7.x86_64.rpm -o aziot-edge-1.2.5-1.el7.x86_64.rpm
 ```
-
-Install packages
+#### Install packages
 
 ```
 sudo yum install ./packages-microsoft-prod.rpm
