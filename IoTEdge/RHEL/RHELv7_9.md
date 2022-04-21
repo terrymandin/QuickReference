@@ -18,15 +18,32 @@
 
 ### Steps
 #### Install IoT Edge
+
+Option 1 - Use this option if "wget" is installed
+
 ```
 sudo su
-
 wget https://packages.microsoft.com/config/rhel/7.4/packages-microsoft-prod.rpm
 wget https://packages.microsoft.com/centos/7/prod/moby-cli-3.0.13%2Bazure-0.x86_64.rpm
 wget https://packages.microsoft.com/centos/7/prod/moby-engine-3.0.13%2Bazure-0.x86_64.rpm
 wget https://github.com/Azure/azure-iotedge/releases/download/1.2.5/aziot-identity-service-1.2.4-1.x86_64.rpm
 wget https://github.com/Azure/azure-iotedge/releases/download/1.2.5/aziot-edge-1.2.5-1.el7.x86_64.rpm
+```
 
+Option 2 - "wget" is not installed
+
+```
+sudo su
+curl -L https://packages.microsoft.com/config/rhel/7.4/packages-microsoft-prod.rpm -o packages-microsoft-prod.rpm
+curl -L https://packages.microsoft.com/centos/7/prod/moby-cli-3.0.13%2Bazure-0.x86_64.rpm -o moby-cli-3.0.13%2Bazure-0.x86_64.rpm
+curl -L https://packages.microsoft.com/centos/7/prod/moby-engine-3.0.13%2Bazure-0.x86_64.rpm -o moby-engine-3.0.13%2Bazure-0.x86_64.rpm
+curl -L https://github.com/Azure/azure-iotedge/releases/download/1.2.5/aziot-identity-service-1.2.4-1.x86_64.rpm -o aziot-identity-service-1.2.4-1.x86_64.rpm
+curl -L https://github.com/Azure/azure-iotedge/releases/download/1.2.5/aziot-edge-1.2.5-1.el7.x86_64.rpm -o aziot-edge-1.2.5-1.el7.x86_64.rpm
+```
+
+Install packages
+
+```
 sudo yum install ./packages-microsoft-prod.rpm
 sudo yum install moby-cli-3.0.10+azure-0.x86_64.rpm
 sudo yum install moby-engine-3.0.10+azure-0.x86_64.rpm
