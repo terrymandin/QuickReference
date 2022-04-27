@@ -10,6 +10,8 @@ Uses the [DefaultAzureCredential](https://docs.microsoft.com/en-us/dotnet/api/az
 
 Get the FunctionApp identity.
 
+In the Azure Portal, turn on "System assigned" identity in the "Identity" blade.
+
 ```
 az functionapp identity show --resource-group <your-resource-group> --name <your-function-app-name>
 ```
