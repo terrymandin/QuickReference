@@ -53,5 +53,5 @@ watch iotedge list
 ```
 - See free memory
 ```
-freem -m
+free -m
 ```
