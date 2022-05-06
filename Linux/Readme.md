@@ -51,3 +51,7 @@ ufw allow <port>
 ```
 watch iotedge list
 ```
+- See free memory
+```
+freem -m
+```
