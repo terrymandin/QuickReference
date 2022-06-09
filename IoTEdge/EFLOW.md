@@ -3,5 +3,7 @@
 ## Commands
 
 ```
-set-eflowvm
+Set-EflowVm
+Connect-EflowVm
+Copy-EflowVmFile
 ```
