@@ -8,61 +8,61 @@
 
 * Log into [Azure Bash Shell](https://docs.microsoft.com/en-us/azure/cloud-shell/quickstart).
 * Extract the nested edge configuration tool to a directory.
-``` 
-mkdir nestedIotEdgeTutorial
-cd ~/nestedIotEdgeTutorial
-wget -O iotedge_config.tar "https://github.com/Azure-Samples/iotedge_config_cli/releases/download/latest/iotedge_config_cli.tar.gz"
-tar -xvf iotedge_config.tar
-```
-- Edit the config utility file
-```
-code ~/nestedIotEdgeTutorial/iotedge_config_cli_release/templates/tutorial/iotedge_config.yaml
-```
-- Update iothub_hostname (hubName.azure-devices.net) and iothub_name (hubName)
-- Close the file
-- Run the utility
-```
-mkdir ~/nestedIotEdgeTutorial/iotedge_config_cli_release/outputs
-cd ~/nestedIotEdgeTutorial/iotedge_config_cli_release
-./iotedge_config --config ~/nestedIotEdgeTutorial/iotedge_config_cli_release/templates/tutorial/iotedge_config.yaml --output ~/nestedIotEdgeTutorial/iotedge_config_cli_release/outputs -f![image](https://user-images.githubusercontent.com/833055/177221020-5d91e2a5-8b40-4790-8cdf-0c02e40ba088.png)
-```
+  ``` 
+  mkdir nestedIotEdgeTutorial
+  cd ~/nestedIotEdgeTutorial
+  wget -O iotedge_config.tar "https://github.com/Azure-Samples/iotedge_config_cli/releases/download/latest/iotedge_config_cli.tar.gz"
+  tar -xvf iotedge_config.tar
+  ```
+* Edit the config utility file
+  ```
+  code ~/nestedIotEdgeTutorial/iotedge_config_cli_release/templates/tutorial/iotedge_config.yaml
+  ```
+  - Update iothub_hostname (hubName.azure-devices.net) and iothub_name (hubName)
+  - Close the file
+* Run the installation
+  ```
+  mkdir ~/nestedIotEdgeTutorial/iotedge_config_cli_release/outputs
+  cd ~/nestedIotEdgeTutorial/iotedge_config_cli_release
+  ./iotedge_config --config ~/nestedIotEdgeTutorial/iotedge_config_cli_release/templates/tutorial/iotedge_config.yaml --output ~/nestedIotEdgeTutorial/iotedge_config_cli_release/outputs -f
+  ```
 * Explort the following files to your local C: drive
-```
-~/nestedIotEdgeTutorial/iotedge_config_cli_release/outputs/lower-layer.zip
-~/nestedIotEdgeTutorial/iotedge_config_cli_release/outputs/top-layer.zip
-```
+  ```
+  ~/nestedIotEdgeTutorial/iotedge_config_cli_release/outputs/lower-layer.zip
+  ~/nestedIotEdgeTutorial/iotedge_config_cli_release/outputs/top-layer.zip
+  ```
 * Extract the files from each zip file into their own directory
 * Edit the ```install.sh``` file in both directories (ie. for both the top level and the lower level).  
-* Replace
-  ```
-  cp iotedge_config_cli_root.pem /usr/local/share/ca-certificates/iotedge_config_cli_root.pem.crt
-  update-ca-certificates
-  ```
-  with
-  ```
-  cp iotedge_config_cli_root.pem /etc/pki/ca-trust/source/anchors/iotedge_config_cli_root.pem.crt
-  update-ca-trust
-  ```
-* Save the file
+  - Replace
+    ```
+    cp iotedge_config_cli_root.pem /usr/local/share/ca-certificates/iotedge_config_cli_root.pem.crt
+    update-ca-certificates
+    ```
+    with
+    ```
+    cp iotedge_config_cli_root.pem /etc/pki/ca-trust/source/anchors/iotedge_config_cli_root.pem.crt
+    update-ca-trust
+    ```
+  - Save the file
 * Edit the config.toml file
-* Replace the following
-  ```
-  [listen]
-  workload_uri = "fd://aziot-edged.workload.socket"
-  management_uri = "fd://aziot-edged.mgmt.socket"
-  ```
-  with
-  ```
-  [listen]
-  workload_uri = "unix:///var/run/iotedge/workload.sock"
-  management_uri = "unix:///var/run/iotedge/mgmt.sock"
-  ```
-* Save and close the file
+  - Replace the following
+    ```
+    [listen]
+    workload_uri = "fd://aziot-edged.workload.socket"
+    management_uri = "fd://aziot-edged.mgmt.socket"
+    ```
+    with
+    ```
+    [listen]
+    workload_uri = "unix:///var/run/iotedge/workload.sock"
+    management_uri = "unix:///var/run/iotedge/mgmt.sock"
+    ```
+  - Save and close the file
 
 ### Step 2 - Setup networking
 
-* Create an External Switch on the Top Computer
-  - On the top computer open Hyper-V.  
+* Create an External Switch on the **top computer**
+  - Open Hyper-V.  
   - Under "Actions" select "Virtual Switch Manager..."
   - Choose "External"
   - Click on "Create Virtual Switch"
