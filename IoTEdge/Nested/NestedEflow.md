@@ -88,7 +88,38 @@ Set-VMProcessor -VMName <VMName> -ExposeVirtualizationExtensions $true
     Start-Process -Wait msiexec -ArgumentList "/i","$([io.Path]::Combine($env:TEMP, 'AzureIoTEdge.msi'))","/qn"![image](https://user-images.githubusercontent.com/833055/177223634-d80bf9b9-4155-459b-aa0e-0595a19b732d.png)
     Deploy-Eflow -vSwitchType "External" -vSwitchName "ExternalSwitchName"
     ```
-  * fina
+* Configure EFLOW
+  - Copy the files from the "top level" directory created in Step 1 to the local machine
+  - Change directory in PowerShell to the directory where the files are located
+  - Copy the files into the EFLOW Mariner VM
+    ```
+    Copy-EflowVmFile -fromFile *.* -tofile ~/ -pushFile
+    ```
+  - Start an SSH session in the Mariner VM
+    ```
+    Connect-EflowVm
+    ```
+  - Create the following directory
+    ```
+    sudo mkdir /etc/ca-certificates
+    sudo chmod 755 /etc/ca-certificates
+    ```
+  - Update the permissions on the ```install.sh``` file
+    ```
+    sudo chmod 755 install.sh
+    ```
+  - Run install.sh
+    ```
+    sudo ./install.sh
+    ```
+  - Provide the current computer's IP address when prompted for the Host name
+  - Edit the config.toml file
+    ```
+    sudo vi /etc/aziot/config.toml
+    ```
+  - Replace the following
+    ```
+    ```
 
 
   
