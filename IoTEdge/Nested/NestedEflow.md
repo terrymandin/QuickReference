@@ -59,20 +59,39 @@ cd ~/nestedIotEdgeTutorial/iotedge_config_cli_release
   ```
 * Save and close the file
 
-### Step 2 - Create an External Switch on the Top Computer
+### Step 2 - Setup networking
 
-* On the top computer open Hyper-V.  
-* Under "Actions" select "Virtual Switch Manager..."
-* Choose "External"
-* Click on "Create Virtual Switch"
-* Give your switch a name.  e.g. "EFLOW"
-* Click on "External network"
-* Under "External network", choose the network you are currently using
-* Enable the "Allow management operating system to share this network adapter" check box
-* Leave all of the other defaults
-* Click "Apply"
-* Click "OK"
-
+* Create an External Switch on the Top Computer
+  - On the top computer open Hyper-V.  
+  - Under "Actions" select "Virtual Switch Manager..."
+  - Choose "External"
+  - Click on "Create Virtual Switch"
+  - Give your switch a name.  e.g. "EFLOW"
+  - Click on "External network"
+  - Under "External network", choose the network you are currently using
+  - Enable the "Allow management operating system to share this network adapter" check box
+  - Leave all of the other defaults
+  - Click "Apply"
+  - Click "OK"
+* Open Ports
+  - On the **top computer** open the following ports
+    ```
+    sudo iptables -A INPUT -p tcp --dport 5671 -j ACCEPT
+    sudo iptables -A INPUT -p tcp --dport 8883 -j ACCEPT
+    sudo iptables -A INPUT -p tcp --dport 443 -j ACCEPT
+    ```
+  - To allow pings on the **top computer** allow ICMP messages
+    ```
+    sudo iptables -A INPUT -p icmp --icmp-type 8 -s 0/0 -m state --state NEW,ESTABLISHED,RELATED -j ACCEPT
+    ```
+  - To make the simulation module work on the **lower computer** open the AMQP port
+    ```
+    sudo iptables -A INPUT -p tcp --dport 5671 -j ACCEPT
+    ```
+* Test connectivity from the lower device to the top device using a ping
+  ```
+  ping x.x.x.x
+  ```
 ### Step 3 - Install EFLOW on both devices
 
 Complete the following steps on both devices.
@@ -133,9 +152,38 @@ Complete the following steps on both devices.
     ```
     sudo ./install.sh
     ```
-  - Provide the current computer's IP address when prompted for the Host name
-  - If the device is the **lower device** then also provide the ip address of the parent device
+    - Provide the current computer's IP address when prompted for the Host name
+    - If the device is the **lower device** then provide the ip address of the parent device
+  - Run the following Linux commands to create required directories and set permissions
+    ```
+    sudo mkdir /var/run/iotedge
+    sudo chmod 777 /var/run/iotedge
+    sudo chown iotedge /var/run/iotedge
+    sudo chmod 777 /etc/aziot/certificates -R![image](https://user-images.githubusercontent.com/833055/177369825-6cb43cf0-46f8-48c7-b154-c38af329e73f.png)
+    ```
+  - Apply the configuration changes
+    ```
+    sudo iotedge config apply
+    ```
+## Step 4 - Confirm everything is working properly
 
-
+* On the **top computer** perform the following checks
+  ```
+  # Perform an IoT Edge check
+  sudo iotedge check
   
+  # Confirm all modules are running.  You should see:
+  #   - edgeAgent
+  #   - edgeHub
+  #   - registry
+  #   - IoTEdgeAPIProxy
+  docker ps
+  
+  # Check the logs for all of the modules.  (This can also be done in the portal)
+  docker logs edgeAgent
+  docker logs edgeHub
+  docker logs restistry
+  docker logs IoTEdgeAPIProxy
+  ```
 
+## That's it - all done!
