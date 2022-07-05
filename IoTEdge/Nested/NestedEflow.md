@@ -2,6 +2,16 @@
 
 ## Overview
 
+Below are the steps required to configure a nested IoT Edge deployment using EFLOW for both the top and lower device.  In order to simplify the deployment, the steps required have been extracted from multiple Azure IoT documentation locations including:
+* [Create and provision an IoT Edge for Linux on Windows device using symmetric keys](https://docs.microsoft.com/en-us/azure/iot-edge/how-to-provision-single-device-linux-on-windows-symmetric?view=iotedge-2020-11&tabs=azure-portal%2Cpowershell)
+* [Tutorial: Create a hierarchy of IoT Edge devices](https://docs.microsoft.com/en-us/azure/iot-edge/tutorial-nested-iot-edge?view=iotedge-2020-11)
+
+These instructions will configure the devices to connect via symmetric keys to the Azure IoT Hub, and will create development certificates for the communication between the devices.  
+
+**Before going to production:**
+* **Test the deployment in a development environment**
+* **Use production certificates for communication to the IoT Hub and between the nested devices**
+
 ## Steps
 
 ### Step 1 - Create installation scripts
@@ -100,7 +110,6 @@ Complete the following steps on both devices.
   Set-VMProcessor -VMName <VMName> -ExposeVirtualizationExtensions $true
   ```
 * Install EFLOW 
-  - Steps below are from [Create and provision an IoT Edge for Linux on Windows device using symmetric keys](https://docs.microsoft.com/en-us/azure/iot-edge/how-to-provision-single-device-linux-on-windows-symmetric?view=iotedge-2020-11&tabs=azure-portal%2Cpowershell)
   - Open PowerShell in admin mode
   - Enable Hyper-V
     ```
