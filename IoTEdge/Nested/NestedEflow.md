@@ -32,7 +32,7 @@
   ~/nestedIotEdgeTutorial/iotedge_config_cli_release/outputs/top-layer.zip
   ```
 * Extract the files from each zip file into their own directory
-* Edit the ```install.sh``` file in both directories (ie. for both the top level and the lower level).  
+* Edit the ```install.sh``` file **in both directories** (ie. for both the top level and the lower level).  
   - Replace
     ```
     cp iotedge_config_cli_root.pem /usr/local/share/ca-certificates/iotedge_config_cli_root.pem.crt
@@ -44,7 +44,7 @@
     update-ca-trust
     ```
   - Save the file
-* Edit the config.toml file
+* Edit the config.toml file **in both directories**
   - Replace the following
     ```
     [listen]
@@ -131,7 +131,7 @@ Complete the following steps on both devices.
     Deploy-Eflow
     ```
 * Configure EFLOW
-  - Copy the appropriate files (top or lower) from Step 1 to the local machine's C: drive
+  - Copy the appropriate directory (top or lower) from Step 1 to the local machine's C: drive
   - Change directory in PowerShell to the directory where the files are located
   - Copy the files into the EFLOW Mariner VM
     ```
