@@ -32,38 +32,54 @@ cd ~/nestedIotEdgeTutorial/iotedge_config_cli_release
 ~/nestedIotEdgeTutorial/iotedge_config_cli_release/outputs/top-layer.zip
 ```
 * Extract the files from each zip file into their own directory
-* Edit the ```install.sh``` file in both directories.  
+* Edit the ```install.sh``` file in both directories (ie. for both the top level and the lower level).  
 * Replace
-```
-cp iotedge_config_cli_root.pem /usr/local/share/ca-certificates/iotedge_config_cli_root.pem.crt
-update-ca-certificates
-```
-with
-```
-cp iotedge_config_cli_root.pem /etc/pki/ca-trust/source/anchors/iotedge_config_cli_root.pem.crt
-update-ca-trust
-
-```
+  ```
+  cp iotedge_config_cli_root.pem /usr/local/share/ca-certificates/iotedge_config_cli_root.pem.crt
+  update-ca-certificates
+  ```
+  with
+  ```
+  cp iotedge_config_cli_root.pem /etc/pki/ca-trust/source/anchors/iotedge_config_cli_root.pem.crt
+  update-ca-trust
+  ```
 * Save the file
+* Edit the config.toml file
+* Replace the following
+  ```
+  [listen]
+  workload_uri = "fd://aziot-edged.workload.socket"
+  management_uri = "fd://aziot-edged.mgmt.socket"
+  ```
+  with
+  ```
+  [listen]
+  workload_uri = "unix:///var/run/iotedge/workload.sock"
+  management_uri = "unix:///var/run/iotedge/mgmt.sock"
+  ```
+* Save and close the file
 
-### Step 2 - Install EFLOW on the Top device
+### Step 2 - Create an External Switch on the Top Computer
 
-- Ensure that nested virtualization is enabled on the VM.  If the device is in a VM open PowerShell in admin mode and run the following while the VM is not running
-```
-Set-VMProcessor -VMName <VMName> -ExposeVirtualizationExtensions $true
-```
-* Create an external switch in Hyper-V
-  - Open Hyper-V.  
-  - Under "Actions" select "Virtual Switch Manager..."
-  - Choose "External"
-  - Click on "Create Virtual Switch"
-  - Give your switch a name.  e.g. "EFLOW"
-  - Click on "External network"
-  - Under "External network", choose the network you are currently using
-  - Enable the "Allow management operating system to share this network adapter" check box
-  - Leave all of the other defaults
-  - Click "Apply"
-  - Click "OK"
+* On the top computer open Hyper-V.  
+* Under "Actions" select "Virtual Switch Manager..."
+* Choose "External"
+* Click on "Create Virtual Switch"
+* Give your switch a name.  e.g. "EFLOW"
+* Click on "External network"
+* Under "External network", choose the network you are currently using
+* Enable the "Allow management operating system to share this network adapter" check box
+* Leave all of the other defaults
+* Click "Apply"
+* Click "OK"
+
+### Step 3 - Install EFLOW on both devices
+
+Complete the following steps on both devices.
+* Ensure that nested virtualization is enabled on the VM.  If the device is in a VM open PowerShell in admin mode and run the following while the VM is not running
+  ```
+  Set-VMProcessor -VMName <VMName> -ExposeVirtualizationExtensions $true
+  ```
 * Install EFLOW 
   - Steps below are from [Create and provision an IoT Edge for Linux on Windows device using symmetric keys](https://docs.microsoft.com/en-us/azure/iot-edge/how-to-provision-single-device-linux-on-windows-symmetric?view=iotedge-2020-11&tabs=azure-portal%2Cpowershell)
   - Open PowerShell in admin mode
@@ -78,18 +94,23 @@ Set-VMProcessor -VMName <VMName> -ExposeVirtualizationExtensions $true
   - If not run the following
     ```
     Set-ExecutionPolicy -ExecutionPolicy AllSigned -Force
-    ```
-  - Update the script below to include the name of the external switch you created (replace ExternalSwitchName), then run the script
-    ```
+    
     $msiPath = $([io.Path]::Combine($env:TEMP, 'AzureIoTEdge.msi'))
     $ProgressPreference = 'SilentlyContinue'
     Invoke-WebRequest "https://aka.ms/AzEFLOWMSI-CR-X64" -OutFile $msiPath
 
     Start-Process -Wait msiexec -ArgumentList "/i","$([io.Path]::Combine($env:TEMP, 'AzureIoTEdge.msi'))","/qn"![image](https://user-images.githubusercontent.com/833055/177223634-d80bf9b9-4155-459b-aa0e-0595a19b732d.png)
+    ```
+  - On the **top device**, specify the switch that was created in Step 2.  Please insert the name of your external switch in the snippet below
+    ```
     Deploy-Eflow -vSwitchType "External" -vSwitchName "ExternalSwitchName"
     ```
+  - On the **lower device** no parameters are necessary
+    ```
+    Deploy-Eflow
+    ```
 * Configure EFLOW
-  - Copy the files from the "top level" directory created in Step 1 to the local machine
+  - Copy the appropriate files (top or lower) from Step 1 to the local machine's C: drive
   - Change directory in PowerShell to the directory where the files are located
   - Copy the files into the EFLOW Mariner VM
     ```
@@ -113,13 +134,7 @@ Set-VMProcessor -VMName <VMName> -ExposeVirtualizationExtensions $true
     sudo ./install.sh
     ```
   - Provide the current computer's IP address when prompted for the Host name
-  - Edit the config.toml file
-    ```
-    sudo vi /etc/aziot/config.toml
-    ```
-  - Replace the following
-    ```
-    ```
+  - If the device is the **lower device** then also provide the ip address of the parent device
 
 
   
