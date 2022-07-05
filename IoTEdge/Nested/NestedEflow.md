@@ -113,7 +113,9 @@ Complete the following steps on both devices.
   - If not run the following
     ```
     Set-ExecutionPolicy -ExecutionPolicy AllSigned -Force
-    
+    ```
+  - Complete the install
+    ```
     $msiPath = $([io.Path]::Combine($env:TEMP, 'AzureIoTEdge.msi'))
     $ProgressPreference = 'SilentlyContinue'
     Invoke-WebRequest "https://aka.ms/AzEFLOWMSI-CR-X64" -OutFile $msiPath
