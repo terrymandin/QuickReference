@@ -55,3 +55,5 @@ watch iotedge list
 ```
 free -m
 ```
+- Resize disk
+See [Linux: extend a partition](https://rdr-it.com/en/troubleshooting/linux-extend-a-partition/#:~:text=Hyper%2DV%3A%20extend%20a%20virtual%20disk,-This%20can%20be&text=From%20the%20parameters%20of%20the,by%20clicking%20on%20Finish%201.)
