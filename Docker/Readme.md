@@ -16,6 +16,7 @@ docker run --rm -it -v "$(pwd):/app" ubuntu:latest // I think this is linux only
 docker run --rm -it -v //c/tmp/dockerdir:/app ubuntu:latest // windows directory mount
 docker run --rm -it -v "//c/<dir>:/app" mcr.microsoft.com/dotnet/sdk:5.0 bash
 docker run -p 8080:80 // maps host port 8080 to container port 80
+docker run --rm -d --network host // use the host network
 ```
 
 ## Docker Execute
