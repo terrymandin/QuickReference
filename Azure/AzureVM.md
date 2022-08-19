@@ -36,12 +36,8 @@
   az vm delete --no-wait -y --resource-group <resource-group> --name <VM-name> 
   ```
 * Expand Disk size
-
-  See [Expand virtual hard disks on a Linux VM with the Azure CLI](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/expand-disks)
-  ```
-  az vm deallocate --resource-group <resourceGroup> --name <vmName>
-  az disk list --resource-group <resourceGroup> --query '[*].{Name:name,Gb:diskSizeGb,Tier:accountType}' --output table
-  az disk update --resource-group <resourceGroup> --name <diskName> --size-gb 75
-  az vm start --resource-group <resourceGroup> --name <vmName>
-  az vm show --resource-group <resourceGroup> --name <vmName> -d --query [publicIps] --output tsv
-  ```
+  - In the portal, Click on the "Disks" blade in the VM
+  - Click on the disk
+  - Click on "Size + Performance"
+  - Enter the new size
+  - Click on "Resize"
