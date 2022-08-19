@@ -35,3 +35,13 @@
   ```
   az vm delete --no-wait -y --resource-group <resource-group> --name <VM-name> 
   ```
+* Expand Disk size
+
+  See [Expand virtual hard disks on a Linux VM with the Azure CLI](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/expand-disks)
+  ```
+  az vm deallocate --resource-group TMK8S --name TMK8SMaster
+  az disk list --resource-group TMK8S --query '[*].{Name:name,Gb:diskSizeGb,Tier:accountType}' --output table
+  az disk update --resource-group TMK8S --name TMK8SMaster_OsDisk_1_44e9817e15b647b19bf8853ae570ecf2 --size-gb 75
+  az vm start --resource-group TMK8S --name TMK8SMaster
+  az vm show --resource-group TMK8S --name TMK8SMaster -d --query [publicIps] --output tsv
+  ```
