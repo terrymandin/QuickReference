@@ -8,6 +8,16 @@ Connect-EflowVm
 Copy-EflowVmFile
 ```
 
+## Enable Defender
+
+```
+systemctl enable defender-iot-micro-agent.service
+```
+
+View in Log Analytics
+- Under AzureSecurityOfThings
+- View SecurityIoTRawEvent 
+
 ## Troubleshooting
 
 ```
