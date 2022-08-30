@@ -62,3 +62,9 @@ free -m
 ```
 grep MemTotal /proc/meminfo
 ```
+
+- OS Version
+
+```
+cat /etc/issue
+```
