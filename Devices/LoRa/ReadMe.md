@@ -23,7 +23,6 @@
   # Please note the insertion of the literals 'FFFE'  in the midde, as per [Basic Station 2.0.6 January 2022 documentation](https://lora-developers.semtech.com/build/software/lora-basics/lora-basics-for-gateways/?url=glossary.html) 
   ```
 - Enable SPI on Raspberry PI
-- If station module is not starting, change something in the module twin and re-deploy
 - Setup Device
   ![image](https://user-images.githubusercontent.com/833055/187965309-c909f80d-1817-4be5-a4a9-6986c3104329.png)
   - NOTE: Use version 0.0.5 instead or you won't see the region.
@@ -36,3 +35,6 @@
   - ![image](https://user-images.githubusercontent.com/833055/187964410-4893b3b3-bb34-4e70-b255-2d76bbfe4de7.png)
   ![image](https://user-images.githubusercontent.com/833055/187964757-18f59ccd-2b46-4150-bec2-d382f80ced41.png)
 
+## Troubleshooting
+- If station module is not starting, change something in the module twin and re-deploy
+- If Arduino cannot see the COM port restart Arduino
