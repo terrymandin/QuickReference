@@ -34,6 +34,7 @@
   - Similarly enter the string AppEui and AppKey as hex (e.g. “70B3D57ED002B18A”)
   - ![image](https://user-images.githubusercontent.com/833055/187964410-4893b3b3-bb34-4e70-b255-2d76bbfe4de7.png)
   ![image](https://user-images.githubusercontent.com/833055/187964757-18f59ccd-2b46-4150-bec2-d382f80ced41.png)
+  - [Sample Sketch](https://github.com/terrymandin/QuickReference/blob/master/Devices/LoRa/ArduinoSketch.ino)
 
 ## Troubleshooting
 - If station module is not starting, change something in the module twin and re-deploy
