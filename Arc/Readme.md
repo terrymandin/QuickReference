@@ -1,10 +1,14 @@
 # Azure Arc
 
+Arc Agent is azcmagent.  It is conposed of:
+-  Hybrid Instance Metadata Service (HIMDS).  Handles managed identity and communication with Azure AD.
+-  Guest Configuration. Responsible for evaluating Azure Policy on the machine.
+-  Extension Manager. Manages VM extensions, including install, uninstall, and upgrade.  e.g. Update Management, Log Analytics (MMAExtension)
+
 ## Commands
 
 - See status
   ```
-  # Arc Agent is azcmagent
   sudo azcmagent show
   ```
 ## Demo
