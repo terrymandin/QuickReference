@@ -46,15 +46,15 @@ rm ubuntulogin.sh
 #Create a windows vm and deploy a login script that will stop the azure agents and enable the firewall on the vm to prevent it from communicating with the Azure Instance Metadata Service (IMDS)
 windowsimage="MicrosoftWindowsServer:WindowsServer:2022-Datacenter:latest"
 az vm create --resource-group $azureResourceGroup --name "arcwinvm$rand" --image $windowsimage --admin-username $user --admin-password $password --size Standard_D4s_v3 --vnet-name "arcvnet$rand" --subnet "default" --nsg "" --public-ip-address-allocation static
-wget https://raw.githubusercontent.com/howardginsburg/AzureArcTraining/main/windowslogin.ps1
+wget https://raw.githubusercontent.com/terrymandin/QuickReference/master/Arc/Servers/windows.ps1
 az vm run-command invoke  --command-id RunPowerShellScript --name "arcwinvm$rand" -g $azureResourceGroup  \
     --scripts @windowslogin.ps1 \
     --parameters "adminUserName=$user"
 rm windowslogin.ps1
 
 #Create a 1 node AKS instance.
-az aks create -g $azureResourceGroup -n arcaks$rand -u $user --node-count 1 --generate-ssh-keys --node-vm-size Standard_DS2_v2
+#az aks create -g $azureResourceGroup -n arcaks$rand -u $user --node-count 1 --generate-ssh-keys --node-vm-size Standard_DS2_v2
 
 #Create an instance of log analytics and azure automation to speed arc setup by the user.
-az monitor log-analytics workspace create -g $arcResourceGroup -n "arcworkspace$rand"
-az automation account create --automation-account-name "arcautomation$rand" --resource-group $arcResourceGroup
+#az monitor log-analytics workspace create -g $arcResourceGroup -n "arcworkspace$rand"
+#az automation account create --automation-account-name "arcautomation$rand" --resource-group $arcResourceGroup
