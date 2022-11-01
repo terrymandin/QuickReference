@@ -17,3 +17,9 @@
 ```
 az ad sp create-for-rbac -n "<Your Unique Name>" --role "Azure Connected Machine Onboarding" --scopes /subscriptions/$subscriptionId
 ```
+
+3. Onboard Servers.  Check Linux with this command:
+
+```
+sudo lsof -ai -p $(pidof himds)
+```
