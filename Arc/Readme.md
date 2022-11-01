@@ -8,4 +8,4 @@
   ```
 ## Demo
 
-[1. Setup the environment](https://github.com/terrymandin/QuickReference/tree/master/Arc/Environment)
+1. [Setup the environment](https://github.com/terrymandin/QuickReference/tree/master/Arc/Environment)
