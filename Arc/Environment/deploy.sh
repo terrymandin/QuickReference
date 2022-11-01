@@ -41,7 +41,7 @@ wget https://raw.githubusercontent.com/terrymandin/QuickReference/master/Arc/Env
 az vm run-command invoke -g $azureResourceGroup -n "arcubuntuvm$rand" --command-id RunShellScript \
     --scripts @ubuntu.sh \
     --parameters "$user arcubuntuvm$rand"
-rm ubuntulogin.sh
+rm ubuntu.sh
 
 #Create a windows vm and deploy a login script that will stop the azure agents and enable the firewall on the vm to prevent it from communicating with the Azure Instance Metadata Service (IMDS)
 windowsimage="MicrosoftWindowsServer:WindowsServer:2022-Datacenter:latest"
@@ -50,7 +50,7 @@ wget https://raw.githubusercontent.com/terrymandin/QuickReference/master/Arc/Env
 az vm run-command invoke  --command-id RunPowerShellScript --name "arcwinvm$rand" -g $azureResourceGroup  \
     --scripts @windows.ps1 \
     --parameters "adminUserName=$user"
-rm windowslogin.ps1
+rm windows.ps1
 
 #Create a 1 node AKS instance.
 az aks create -g $azureResourceGroup -n arcaks$rand -u $user --node-count 1 --generate-ssh-keys --node-vm-size Standard_DS2_v2
