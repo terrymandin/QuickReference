@@ -14,6 +14,11 @@ Arc Agent is azcmagent.  It is conposed of:
   ```
   sudo azcmagent show
   ```
+- Check Linux status of the Hybrid Instance Metadata Service
+  ```
+  sudo lsof -ai -p $(pidof himds)
+  ```
+  
 ## Demo
 
 1. [Setup the environment](https://github.com/terrymandin/QuickReference/tree/master/Arc/Environment)
@@ -29,7 +34,7 @@ az ad sp create-for-rbac -n "<Your Unique Name>" --role "Azure Connected Machine
 3. Onboard Servers.  Check Linux with this command:
 
 ```
-sudo lsof -ai -p $(pidof himds)
+
 ```
 
 4. Add Policies
