@@ -37,7 +37,7 @@ az network vnet create -g $azureResourceGroup -n "arcvnet$rand" --address-prefix
 #ubuntuimage="Canonical:0001-com-ubuntu-server-focal:20_04-lts:latest" 
 ubuntuimage="Canonical:UbuntuServer:18.04-LTS:latest"
 az vm create --resource-group $azureResourceGroup --name "arcubuntuvm$rand" --image $ubuntuimage --admin-username $user --admin-password $password --size Standard_D4s_v3 --vnet-name "arcvnet$rand" --subnet "default" --nsg "" --public-ip-address-allocation static
-wget https://raw.githubusercontent.com/terrymandin/QuickReference/master/Arc/Servers/ubuntu.sh
+wget https://raw.githubusercontent.com/terrymandin/QuickReference/master/Arc/Environment/ubuntu.sh
 az vm run-command invoke -g $azureResourceGroup -n "arcubuntuvm$rand" --command-id RunShellScript \
     --scripts @ubuntulogin.sh \
     --parameters "$user arcubuntuvm$rand"
@@ -46,7 +46,7 @@ rm ubuntulogin.sh
 #Create a windows vm and deploy a login script that will stop the azure agents and enable the firewall on the vm to prevent it from communicating with the Azure Instance Metadata Service (IMDS)
 windowsimage="MicrosoftWindowsServer:WindowsServer:2022-Datacenter:latest"
 az vm create --resource-group $azureResourceGroup --name "arcwinvm$rand" --image $windowsimage --admin-username $user --admin-password $password --size Standard_D4s_v3 --vnet-name "arcvnet$rand" --subnet "default" --nsg "" --public-ip-address-allocation static
-wget https://raw.githubusercontent.com/terrymandin/QuickReference/master/Arc/Servers/windows.ps1
+wget https://raw.githubusercontent.com/terrymandin/QuickReference/master/Arc/Environment/windows.ps1
 az vm run-command invoke  --command-id RunPowerShellScript --name "arcwinvm$rand" -g $azureResourceGroup  \
     --scripts @windowslogin.ps1 \
     --parameters "adminUserName=$user"
