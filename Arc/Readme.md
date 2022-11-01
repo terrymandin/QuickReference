@@ -39,3 +39,9 @@ sudo lsof -ai -p $(pidof himds)
     - On the Remediation blade click the box and choose the data center
   - Configure Dependency agent on Azure Arc enabled Windows servers
  - Click on the Policies blade to see status
+ - Azure Monitor
+   - [Preview]: Deploy a VMInsights Data Collection Rule and Data Collection Rule Association for Arc
+   - Configure Linux Arc-enabled machines to run Azure Monitor Agent
+   - Configure Dependency agent on Azure Arc enabled Linux servers with Azure Monitoring Agent settings
+   - Configure Windows Arc-enabled machines to run Azure Monitor Agent
+   - Configure Dependency agent on Azure Arc enabled Windows servers with Azure Monitoring Agent settings
