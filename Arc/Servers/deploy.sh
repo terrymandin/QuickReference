@@ -53,8 +53,8 @@ az vm run-command invoke  --command-id RunPowerShellScript --name "arcwinvm$rand
 rm windowslogin.ps1
 
 #Create a 1 node AKS instance.
-#az aks create -g $azureResourceGroup -n arcaks$rand -u $user --node-count 1 --generate-ssh-keys --node-vm-size Standard_DS2_v2
+az aks create -g $azureResourceGroup -n arcaks$rand -u $user --node-count 1 --generate-ssh-keys --node-vm-size Standard_DS2_v2
 
 #Create an instance of log analytics and azure automation to speed arc setup by the user.
-#az monitor log-analytics workspace create -g $arcResourceGroup -n "arcworkspace$rand"
-#az automation account create --automation-account-name "arcautomation$rand" --resource-group $arcResourceGroup
+az monitor log-analytics workspace create -g $arcResourceGroup -n "arcworkspace$rand"
+az automation account create --automation-account-name "arcautomation$rand" --resource-group $arcResourceGroup
