@@ -23,3 +23,19 @@ az ad sp create-for-rbac -n "<Your Unique Name>" --role "Azure Connected Machine
 ```
 sudo lsof -ai -p $(pidof himds)
 ```
+
+4. Add Policies
+
+- Click on Arc Resource Group
+- Click on Policies
+- Add these
+  - Configure Log Analytics extension on Azure Arc enabled Linux servers
+    - On Parameters blade choose your "Log Analytics" service
+    - On the Remediation blade click the box and choose the data center
+  - Configure Dependency agent on Azure Arc enabled Linux servers
+    - On the Remediation blade click the box and choose the data center
+  - Configure Log Analytics extension on Azure Arc enabled Windows servers
+    - On Parameters blade choose your "Log Analytics" service
+    - On the Remediation blade click the box and choose the data center
+  - Configure Dependency agent on Azure Arc enabled Windows servers
+ - Click on the Policies blade to see status
