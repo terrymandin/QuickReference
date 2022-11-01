@@ -12,7 +12,6 @@
 
 2. Create an Azure Service Principal to onboard infrastructure
 
-```
 # Create an Azure Service Principal
 
 ```
