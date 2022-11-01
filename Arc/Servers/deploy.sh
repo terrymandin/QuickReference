@@ -37,7 +37,7 @@ az network vnet create -g $azureResourceGroup -n "arcvnet$rand" --address-prefix
 #ubuntuimage="Canonical:0001-com-ubuntu-server-focal:20_04-lts:latest" 
 ubuntuimage="Canonical:UbuntuServer:18.04-LTS:latest"
 az vm create --resource-group $azureResourceGroup --name "arcubuntuvm$rand" --image $ubuntuimage --admin-username $user --admin-password $password --size Standard_D4s_v3 --vnet-name "arcvnet$rand" --subnet "default" --nsg "" --public-ip-address-allocation static
-wget https://raw.githubusercontent.com/howardginsburg/AzureArcTraining/main/ubuntu.sh
+wget https://raw.githubusercontent.com/terrymandin/QuickReference/master/Arc/Servers/ubuntu.sh
 az vm run-command invoke -g $azureResourceGroup -n "arcubuntuvm$rand" --command-id RunShellScript \
     --scripts @ubuntulogin.sh \
     --parameters "$user arcubuntuvm$rand"
