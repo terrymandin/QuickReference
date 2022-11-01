@@ -4,6 +4,7 @@
 
 - See status
   ```
+  # Arc Agent is azcmagent
   sudo azcmagent show
   ```
 ## Demo
