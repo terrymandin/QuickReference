@@ -60,3 +60,18 @@ az ad sp create-for-rbac -n "<Your Unique Name>" --role "Azure Connected Machine
    - Configure Dependency agent on Azure Arc enabled Linux servers with Azure Monitoring Agent settings
    - Configure Windows Arc-enabled machines to run Azure Monitor Agent
    - Configure Dependency agent on Azure Arc enabled Windows servers with Azure Monitoring Agent settings
+
+## Insights
+
+- Enable "Insights" for each of the VMs
+- Analyze the data
+- Note that data is in Azure Monitor.  Alerts can be created
+- Click on Map.  Then RDP to the VM and view the map again.  You can see the IP address of the connection
+
+## Logs
+
+- Logs are not ingested by default.  To enable logs:
+  - Go to Log Analytics
+  - Click on "Agents Management" and add the logs you want to ingest
+
+
