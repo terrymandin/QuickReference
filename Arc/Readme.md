@@ -1,5 +1,7 @@
 # Azure Arc
 
+From lab: [Azure Arc for Servers and Kubernetes](https://github.com/howardginsburg/AzureArcTraining#1-deploy-resources)
+
 Arc Agent is azcmagent.  It is composed of:
 -  Hybrid Instance Metadata Service (HIMDS).  Handles managed identity and communication with Azure AD.
 -  Guest Configuration. Responsible for evaluating Azure Policy on the machine.
@@ -72,6 +74,8 @@ az ad sp create-for-rbac -n "<Your Unique Name>" --role "Azure Connected Machine
 
 - Logs are not ingested by default.  To enable logs:
   - Go to Log Analytics
-  - Click on "Agents Management" and add the logs you want to ingest
+  - Click on "Legacy Agents Management" and add the logs you want to ingest for OMS Agent or "Agents Management" for Azure Monitor Agent
+    - For legacy all Servers send the data.  AMA can allow you to specify a single VM
+  - c
 
 
