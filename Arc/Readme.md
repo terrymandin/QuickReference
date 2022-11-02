@@ -7,6 +7,8 @@ Arc Agent is azcmagent.  It is composed of:
 -  [Azure Policy built-in definitions for Azure Arc-enabled servers](https://learn.microsoft.com/en-us/azure/azure-arc/servers/policy-reference).  e.g.:
    - Azure Security agent should be installed on your [Linux/Windows] Arc machines
    - ChangeTracking extension should be installed on your [Linux/Windows] Arc machine
+- Assign policies at the tenant, subscription, or resource level
+- Need the Log Analytics and teh Dependency agents to enable insights
 
 ## Commands
 
