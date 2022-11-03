@@ -23,21 +23,23 @@ Arc Agent is azcmagent.  It is composed of:
   sudo lsof -ai -p $(pidof himds)
   ```
   
-## Demo
+## Setup Environment
 
 1. [Setup the environment](https://github.com/terrymandin/QuickReference/tree/master/Arc/Environment)
 
 2. Create an Azure Service Principal to onboard infrastructure
 
-# Create an Azure Service Principal
+## Servers
+
+### Create an Azure Service Principal
 
 ```
 az ad sp create-for-rbac -n "<Your Unique Name>" --role "Azure Connected Machine Onboarding" --scopes /subscriptions/$subscriptionId
 ```
 
-3. Onboard Servers.  
+### Onboard Servers.  
 
-4. Add Policies
+### Add Policies
 
 - Click on Arc Resource Group
 - Click on Policies
@@ -59,21 +61,21 @@ az ad sp create-for-rbac -n "<Your Unique Name>" --role "Azure Connected Machine
    - Configure Windows Arc-enabled machines to run Azure Monitor Agent
    - Configure Dependency agent on Azure Arc enabled Windows servers with Azure Monitoring Agent settings
 
-## Insights
+### Insights
 
 - Enable "Insights" for each of the VMs
 - Analyze the data
 - Note that data is in Azure Monitor.  Alerts can be created
 - Click on Map.  Then RDP to the VM and view the map again.  You can see the IP address of the connection
 
-## Logs
+### Logs
 
 - Logs are not ingested by default.  To enable logs:
   - Go to Log Analytics
   - Click on "Legacy Agents Management" and add the logs you want to ingest for OMS Agent or "Agents Management" for Azure Monitor Agent
     - For legacy all Servers send the data.  AMA can allow you to specify a single VM
   
-## Inventory
+### Inventory
 
 - Enable in Automation account
 - Note new "Solutions" in resource group.  These correspond to Workgroups
@@ -82,7 +84,7 @@ az ad sp create-for-rbac -n "<Your Unique Name>" --role "Azure Connected Machine
 - Can also monitor change tracking.  View groups in Inventory
 - 
 
-## Update Management
+### Update Management
 
 - Go to Updates in your Azure Arc VM.  Note that it is in preview, go to the old experience
 - Go to automation and enable it
@@ -94,3 +96,4 @@ az ad sp create-for-rbac -n "<Your Unique Name>" --role "Azure Connected Machine
 - Click on one and it will run a Log Analytics query
 - Or, go to Updates in the VM to see what is available.  Run a "one time update" or schedule it
 
+## Kubernetes
