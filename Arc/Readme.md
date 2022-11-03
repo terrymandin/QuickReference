@@ -97,3 +97,50 @@ az ad sp create-for-rbac -n "<Your Unique Name>" --role "Azure Connected Machine
 - Or, go to Updates in the VM to see what is available.  Run a "one time update" or schedule it
 
 ## Kubernetes
+
+### Connect
+
+```
+az connectedk8s connect -g <your arc resource group> -n <your arc enabled cluster name> --kube-config quickstart-azure-custom.YAML 
+```
+
+- deploys HELM chart
+- agents get deployed
+
+### Install Extensions
+
+```
+az k8s-extension create --name xyz --extension-type Microsoft.AzureMonitor.Containers --scope cluster --cluster-name abc --resource-group x --cluster-type connectedClusters
+```
+
+Remember to open ports on the Rancher Server VM: 443
+
+### Commands
+
+```
+kubectl --kubeconfig c:/k8s/quickstart-azure-custom.yaml get pods -n azure-arc
+kubectl --kubeconfig c:/k8s/quickstart-azure-custom.yaml get deployment -n azure-arc
+```
+
+## Get Service Account Token
+
+From PowerShell:
+
+- [Service Account Token Instructions](https://learn.microsoft.com/azure/azure-arc/kubernetes/cluster-connect?tabs=azure-powershell#service-account-token-authentication-option)
+
+Note:
+- Can use Microsoft Defender for Cloud for vulnerabilities and regulatory compliance
+- Single pane of class with Sentinel (SIEM)
+
+## Enable Insights
+
+- Go to K8S in your Arc Resource Group
+- Click on Insights, enable
+   - See that the azuremonitor-containers extension is installing in Extensions
+
+## Install Defender for Cloud
+
+- Goto Microsoft Defender for Cloud
+- Click on Environment settings
+- Select subscription
+- Set the 'Servers' and 'Containers' options to 'On'.
