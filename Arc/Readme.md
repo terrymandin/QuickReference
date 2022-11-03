@@ -93,5 +93,4 @@ az ad sp create-for-rbac -n "<Your Unique Name>" --role "Azure Connected Machine
 - Go to Updates in Azure Automation, view updates
 - Click on one and it will run a Log Analytics query
 - Or, go to Updates in the VM to see what is available.  Run a "one time update" or schedule it
-- 
-- 
+
