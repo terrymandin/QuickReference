@@ -35,11 +35,7 @@ Arc Agent is azcmagent.  It is composed of:
 az ad sp create-for-rbac -n "<Your Unique Name>" --role "Azure Connected Machine Onboarding" --scopes /subscriptions/$subscriptionId
 ```
 
-3. Onboard Servers.  Check Linux with this command:
-
-```
-
-```
+3. Onboard Servers.  
 
 4. Add Policies
 
@@ -76,6 +72,12 @@ az ad sp create-for-rbac -n "<Your Unique Name>" --role "Azure Connected Machine
   - Go to Log Analytics
   - Click on "Legacy Agents Management" and add the logs you want to ingest for OMS Agent or "Agents Management" for Azure Monitor Agent
     - For legacy all Servers send the data.  AMA can allow you to specify a single VM
-  - c
+  
+## Inventory
 
+- Enable in Automation account
+- Note new "Solutions" in resource group.  These correspond to Workgroups
+- Add machines through "Manage machines".  This creates a group.  Look for machine group
+- Can monitor for File changes
+- Can also monitor change tracking
 
