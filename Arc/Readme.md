@@ -79,5 +79,19 @@ az ad sp create-for-rbac -n "<Your Unique Name>" --role "Azure Connected Machine
 - Note new "Solutions" in resource group.  These correspond to Workgroups
 - Add machines through "Manage machines".  This creates a group.  Look for machine group
 - Can monitor for File changes
-- Can also monitor change tracking
+- Can also monitor change tracking.  View groups in Inventory
+- 
 
+## Update Management
+
+- Go to Updates in your Azure Arc VM.  Note that it is in preview, go to the old experience
+- Go to automation and enable it
+- Manage machines to add machines
+- Need to add an agent
+  - VM, Updates, Try new Management Update Center, Periodic Assessment, every 24 hours, Add machine, select all
+  - Deploys the LinuxPatchExtension
+- Go to Updates in Azure Automation, view updates
+- Click on one and it will run a Log Analytics query
+- Or, go to Updates in the VM to see what is available.  Run a "one time update" or schedule it
+- 
+- 
