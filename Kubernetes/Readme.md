@@ -147,3 +147,47 @@ spec:
     ports:
       - containerPort: 80
 ```
+
+## Environemnt Variables
+
+Key/Value stores.  Stored at the pod level.  All containers within the pod can access them
+- ConfigMaps
+  - Not sensitive.  It can be seen
+- Secrets
+  - Sensitive data
+  - Can be seen within a pod
+
+## Networking
+
+- Multiple implementations.  e.g.:
+  - Azure CNI
+  - KubeNet (development environments)
+- K8S creates the routing within itself
+- Dynamic
+  - NIC assignment and removal
+  - IP assignment and removal
+  - Port assignmenbt and removal
+- Single CIDR block.  It will be a flat network
+- "Allow All" policy.  Everybody can talk to everybody internally and externally
+- Needs 3 subnets
+  - Master and worker nodes,ie. VMs (external IPs)
+  - PODs (internal IPs)
+  - Services (Internal IPs)
+- Uses Docker Bridge (used for the Pods)
+
+```
+kubectl --kubeconfig quickstart-azure-custom.yaml run -i --tty --rm debug --image=busybox --restart=Never -- sh
+```
+
+## DNS
+
+- Based on CoreDNS
+```
+# All of the cluster objects. Filter by coredns
+kubectl --kubeconfig quickstart-azure-custom.yaml get all -n kube-system | grep coredns
+```
+
+- K8S adds a /etc/resolve.conf file with a nameserver config that points to coredns
+- Use the FQDN of the service to communicate
+  - pod-ip-address..my-namespace.pod.cluster-deomain.example
+  - my-svc.my-namespace.svc.cluster-domain.example
