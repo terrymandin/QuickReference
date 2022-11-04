@@ -6,9 +6,17 @@
 git status
 git pull
 git add .
-git commit -a -m "My first commit"
+git add -A //any change in the repo
+git commit -m "message"
+git commit -a -m "message" //skip staging area
 git push
+git push --set-upstream origin dev
+git diff
+git rm
+git rm --cached
+git remote -v // source of the repo
 dotnet new gitignore
 git cloning
  - use email and token for login
+ - "Compare and Pull Request" to merge dev -> master
  ```
