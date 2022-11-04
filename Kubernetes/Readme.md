@@ -174,6 +174,7 @@ Key/Value stores.  Stored at the pod level.  All containers within the pod can a
   - PODs (internal IPs)
   - Services (Internal IPs)
 - Uses Docker Bridge (used for the Pods)
+- Load balancer of layer 4.  IP+port
 
 ```
 kubectl --kubeconfig quickstart-azure-custom.yaml run -i --tty --rm debug --image=busybox --restart=Never -- sh
@@ -191,3 +192,37 @@ kubectl --kubeconfig quickstart-azure-custom.yaml get all -n kube-system | grep 
 - Use the FQDN of the service to communicate
   - pod-ip-address..my-namespace.pod.cluster-deomain.example
   - my-svc.my-namespace.svc.cluster-domain.example
+
+## Networking
+
+- Services loadbalancing access to the pods
+- Exposes a Virtual IP address + port
+- Service is created in all of the worker nodes
+  - Services is a IP TABLE or IPVS.  Basically forwarding rules
+- Types of services
+  - NodePort
+    - Not enough routable IP addresses.  Service IP is not routable outside of K8S.  Customers can't access the service IP.
+    - Map service port to a port in this range: 30000 - 32767
+    - Just use any of the Worker Node IPs + the port
+  - ClusterIP
+    - Has a routable IP address
+    - default service type
+
+## Ingress
+
+- Expose our service to external custers
+- LoadBalancer (cloud)
+- Can loadbalance multiple services in it
+- Layer 7 load balancer
+  - Terminate SSL (encryption)
+  - Rewrite rules
+  - Affinity rules
+  - Reachable URLs
+- Typically used with HTTP/HTTPS (TCP or UDP ports can be exposed)
+- Not deployed by default
+- K8S + 3rd party
+  - Ingress resource: object used to configure traffic
+    - IP address and which service forwarding traffic
+  - Ingress controller (3rd party): compute object that processes the traffic
+    - Compute power.  Executing rules.
+    - Most commonly used: Nginx, Traefik
