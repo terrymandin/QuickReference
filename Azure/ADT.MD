@@ -8,7 +8,7 @@ Uses the [DefaultAzureCredential](https://docs.microsoft.com/en-us/dotnet/api/az
 
 ### In Azure
 
-In the Azure Portal, turn on "System assigned" identity in the "Identity" blade.
+In the Azure Portal, turn on "System assigned" identity in the "Identity" blade for the Function App.
 
 Next, get the FunctionApp identity.
 
