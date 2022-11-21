@@ -20,3 +20,4 @@ git cloning
  - use email and token for login
  - "Compare and Pull Request" to merge dev -> master
  ```
+git clone https://<gitUser>:<token>@<gitURL?.git
