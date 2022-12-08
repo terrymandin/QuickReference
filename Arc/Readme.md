@@ -23,6 +23,18 @@ Arc Agent is azcmagent.  It is composed of:
   sudo lsof -ai -p $(pidof himds)
   ```
   
+## Extensions
+
+| Extension | Description | Service | Instalation |
+|----|----|----|----|
+| DependencyAgentWindows | Azure Monitor | | All new servers |
+
+## Agents
+
+| Agent | Description | View |
+|----|----|----|
+| himds | Azure Connected Machine agent | sudo lsof -ai -p $(pidof himds) <br> Get-Service \| findstr himds |
+  
 ## Setup Environment
 
 1. [Setup the environment](https://github.com/terrymandin/QuickReference/tree/master/Arc/Environment)
