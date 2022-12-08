@@ -49,6 +49,19 @@ az ad sp credential reset --id <ServicePrincipalClientId>
 1. Select App registrations and + New registration.
 
 ### Onboard Servers.  
+- Go to the Azure Arc blade Azure Portal
+- Add multiple servers
+- Select the service principal
+- Update the secret in the scripts
+
+Windows:
+```
+Get-Service | grep Azure
+```
+Ubunutu:
+```
+sudo lsof -ai -p $(pidof himds)
+```
 
 ### Add Policies
 
