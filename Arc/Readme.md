@@ -40,7 +40,7 @@ az ad sp create-for-rbac -n "<Your Unique Name>" --role "Azure Connected Machine
 ```
 Get existing:
 ```
-az ad sp show --id <ServicePrincipalClientId>
+az ad sp credential reset --id <ServicePrincipalClientId>
 ```
 
 #### Portal
