@@ -33,9 +33,15 @@ Arc Agent is azcmagent.  It is composed of:
 
 ### Create an Azure Service Principal
 
+#### az CLI
 ```
 az ad sp create-for-rbac -n "<Your Unique Name>" --role "Azure Connected Machine Onboarding" --scopes /subscriptions/$subscriptionId
 ```
+
+#### Portal
+1. Navigate to the Azure portal.
+1. Select Azure Active Directory from the left-hand side menu.
+1. Select App registrations and + New registration.
 
 ### Onboard Servers.  
 
