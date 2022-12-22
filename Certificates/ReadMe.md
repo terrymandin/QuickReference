@@ -6,7 +6,7 @@ openssl genrsa -out <name>.key 2048
 ```
 - Create Certificate Signing Request (CSR)
 ```
-openssl req -new -key apiserver.key -subj "/CN=<CNname>" -out <name>.csr
+openssl req -new -key <name>.key -subj "/CN=<CNname>" -out <name>.csr
 ```
 - Sign Certificate
 ```
