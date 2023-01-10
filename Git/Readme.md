@@ -21,4 +21,4 @@ git cloning
  - "Compare and Pull Request" to merge dev -> master
  git clone https://<gitUser>:<token>@<gitURL?.git
  ```
-
+type .\.git\config  // shows original repo
