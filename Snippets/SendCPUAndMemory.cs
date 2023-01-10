@@ -1,6 +1,7 @@
+# git clone https://github.com/Azure/azure-iot-sdk-csharp.git
 # dotnet add package System.Diagnostics.PerformanceCounter --version 7.0.0
-
-
+# cd .\azure-iot-sdk-csharp\provisioning\device\samples\how to guides\SymmetricKeySample
+  
 using System.Diagnostics;
 
 Console.WriteLine("Sending 1,000 telemetry messages 5 seconds apart ...");
