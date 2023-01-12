@@ -14,12 +14,16 @@ for (int i = 0; i<100; i++)
     var jsonMessage = new
     {
         Computer = System.Environment.MachineName,
-        TimeStamp = DateTime.Now,
-        CPU = cpuCounter.NextValue()+"%",
-        Memory = ramCounter.NextValue()+"MB"
+        TimeStamp = DateTime.UtcNow.ToString(),
+        CPU = cpuCounter.NextValue(),
+        Memory = ramCounter.NextValue()
     };
-    Console.WriteLine("SENDING - " + jsonMessage.ToString());
-    using var message = new Message(Encoding.UTF8.GetBytes(jsonMessage.ToString()));
+    string json = JsonConvert.SerializeObject(jsonMessage, Formatting.None);
+
+    Console.WriteLine("SENDING - " + json);
+    using var message = new Message(Encoding.UTF8.GetBytes(json));
+    message.ContentType = "application/json";
+    message.ContentEncoding = "UTF-8";   
     await iotClient.SendEventAsync(message);
     System.Threading.Thread.Sleep(5000);
 }
