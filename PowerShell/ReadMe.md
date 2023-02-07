@@ -21,3 +21,16 @@ Install-Module -Name Az -Scope CurrentUser -Repository PSGallery
 ```
 Connect-AzAccount
 ```
+
+## Context
+```
+Get-AzContext
+Get-AzSubscription
+```
+
+## Sample Commands
+```
+Get-AzResourceGroup
+Get-AzResourceGroup | Format-Table
+Select-AzSubscription -SubscriptionName '<name>'
+```
