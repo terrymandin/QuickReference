@@ -3,6 +3,7 @@
 | Description          | Command                                   | 
 |----------------------|-------------------------------------------|
 | Version              | $PSVersionTable.PSVersion                 |
+| List Modules         | Get-Module                                |
 
 ## Conventions
 - "get" to retrieve data
