@@ -16,3 +16,8 @@
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 Install-Module -Name Az -Scope CurrentUser -Repository PSGallery
 ```
+
+## Connect
+```
+Connect-AzAccount
+```
