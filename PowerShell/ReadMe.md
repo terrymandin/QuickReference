@@ -25,7 +25,7 @@ Connect-AzAccount
 ## Context
 ```
 Get-AzContext
-Get-AzSubscription
+Get-AzSubscriptionGet-AzResource
 ```
 
 ## Sample Commands
@@ -33,4 +33,21 @@ Get-AzSubscription
 Get-AzResourceGroup
 Get-AzResourceGroup | Format-Table
 Select-AzSubscription -SubscriptionName '<name>'
+New-AzResourceGroup -Name <name> -Location <location>
+Get-AzResource
+```
+
+## Create Azure VM
+```
+New-AzVm
+       -ResourceGroupName <resource group name>
+       -Name <machine name>
+       -Credential <credentials object>
+       -Location <location>
+       -Image <image name>
+Remove-AzVM
+Start-AzVM
+Stop-AzVM
+Restart-AzVM
+Update-AzVM
 ```
