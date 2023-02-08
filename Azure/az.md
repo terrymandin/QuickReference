@@ -3,6 +3,7 @@
 ## Commands
 ```
 az find <topic>
+az login --tenant <domain>
 ```
 
 
