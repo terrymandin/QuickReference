@@ -51,3 +51,10 @@ Stop-AzVM
 Restart-AzVM
 Update-AzVM
 ```
+
+## Samples
+
+### Createan Azure VM
+```
+New-AzVm -ResourceGroupName [sandbox resource group name] -Name "testvm-eus-01" -Credential (Get-Credential) -Location "East US" -Image Canonical:0001-com-ubuntu-server-focal:20_04-lts:latest -OpenPorts 22 -PublicIpAddressName "testvm-01"
+```
