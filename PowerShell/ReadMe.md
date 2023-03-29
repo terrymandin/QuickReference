@@ -58,3 +58,8 @@ Update-AzVM
 ```
 New-AzVm -ResourceGroupName [sandbox resource group name] -Name "testvm-eus-01" -Credential (Get-Credential) -Location "East US" -Image Canonical:0001-com-ubuntu-server-focal:20_04-lts:latest -OpenPorts 22 -PublicIpAddressName "testvm-01"
 ```
+
+### Test Network Connection
+```
+Test-NetConnection -ComputerName <ipaddress> -Port 3389 -InformationLevel 'Detailed'
+```
