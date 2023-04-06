@@ -41,3 +41,8 @@
   - Click on "Size + Performance"
   - Enter the new size
   - Click on "Resize"
+* Deploy using an ARM Template
+  - [How to use Azure Resource Manager (ARM) deployment templates with Azure CLI](https://learn.microsoft.com/en-us/azure/azure-resource-manager/templates/deploy-cli#deployment-scope)
+  ```
+  az deployment group create --resource-group <resource-group-name> --template-file <path-to-template>
+  ```
