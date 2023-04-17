@@ -69,10 +69,16 @@ grep MemTotal /proc/meminfo
 cat /etc/issue
 ```
 
-- Generate a SSH key pair.  It creates two files: 
+- Generate a SSH key pair.  It creates two files in .ssh: 
   - private key: ```id-rsa```
   - public key:  ```id_rsa.pub```
 
 ```
 ssh-keygen -m PEM -t rsa -b 4096
+```
+
+Install on an existing vm:
+
+```
+ssh-copy-id -i ~/.ssh/id_rsa.pub azureuser@myserver
 ```
