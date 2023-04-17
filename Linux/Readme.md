@@ -77,8 +77,8 @@ cat /etc/issue
 ssh-keygen -m PEM -t rsa -b 4096
 ```
 
-Install on an existing vm:
+Install on an existing vm.  
 
 ```
-ssh-copy-id -i ~/.ssh/id_rsa.pub azureuser@myserver
+ssh-copy-id -i ~/.ssh/id_rsa.pub user@linuxservername
 ```
