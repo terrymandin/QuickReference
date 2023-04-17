@@ -82,3 +82,26 @@ Install on an existing vm.
 ```
 ssh-copy-id -i ~/.ssh/id_rsa.pub user@linuxservername
 ```
+
+- Initializing Data Disks ([details](https://learn.microsoft.com/en-us/training/modules/add-and-size-disks-in-azure-virtual-machines/))
+
+List messages from the kernel for SCSI devices
+```
+dmesg | grep SCSI
+```
+
+Create a new primary partition.  Choose disk from command above.  In this case it is "sdc"
+```
+(echo n; echo p; echo 1; echo ; echo ; echo w) | sudo fdisk /dev/sdc
+```
+
+Write the filesystem:
+
+```
+sudo mkfs -t ext4 /dev/sdc1
+```
+
+Mount the drive:
+```
+sudo mkdir /data && sudo mount /dev/sdc1 /data
+```
