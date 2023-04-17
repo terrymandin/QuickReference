@@ -68,3 +68,9 @@ grep MemTotal /proc/meminfo
 ```
 cat /etc/issue
 ```
+
+- Generate a SSH Kye pair
+
+```
+ssh-keygen -m PEM -t rsa -b 4096
+```
