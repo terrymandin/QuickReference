@@ -27,3 +27,10 @@ git cloning
  git clone https://<gitUser>:<token>@<gitURL?.git
  ```
 type .\.git\config  // shows original repo
+
+# GitHub
+
+## Search a repo
+
+1. Go to: [https://cs.github.com/](https://cs.github.com/)
+2. Enter: ```repo:<name> <searchtext>```
