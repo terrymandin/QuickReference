@@ -1,8 +1,12 @@
 # Azure Backup
 
-## Questions
+## Q & A
 
-1. Will your recovery services vault be available from the public internet or only on the private network?
+- When to use a bare metal or system state backup? 
+
+## Customer Questions
+
+- Will your recovery services vault be available from the public internet or only on the private network?
 
 ## Scenarios
 
