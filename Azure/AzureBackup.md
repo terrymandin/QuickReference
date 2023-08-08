@@ -21,6 +21,8 @@
 
 ### Azure Site Recovery
 
+- [Slide](https://microsoft.sharepoint.com/:p:/r/teams/ASDIPRelease/IP%20Release/Secure%20Infrastructure/VBD/Attaching%20Azure%20Backup%20and%20Azure%20Site%20Recovery%20to%20Virtual%20Machines/Technical%20Upskilling%20Plan/Attaching%20Azure%20Backup%20and%20ASR%20Chalk%20%26%20Talk.pptx?d=wd6f5ed0ad0e1493eacae891b848951dc&csf=1&web=1&e=zqzPBb&nav=eyJzSWQiOjI5NywiY0lkIjo0MjI4Mjc0MDYwfQ)
+
 ## Scenarios
 
 ### Backup and Restore On-Prem Server
