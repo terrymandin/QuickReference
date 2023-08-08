@@ -17,6 +17,10 @@
 - What are your regions?
 - Do you want to backup to another region?  (ie. Site Recovery)
 
+## To Do
+
+### Azure Site Recovery
+
 ## Scenarios
 
 ### Backup and Restore On-Prem Server
