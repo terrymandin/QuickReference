@@ -16,6 +16,7 @@
 - Do you have any Trusted VMs.  Trusted VMs are not configurable with Azure Site Recovery, but will with with Azure Backup Enhanced mode.
 - What are your regions?
 - Do you want to backup to another region?  (ie. Site Recovery)
+- Do you need a Crash or App consistent backup?
 
 ## To Do
 
