@@ -8,7 +8,9 @@
 - Do customers usually use file backups?
 - When do you go with a IaC approach instead of backup?
 - Do you often discuss database backups, or is it usuall IaaS?
-- How do customers decide if they will use a partner / ISV?  Do we help them decide?
+- How do customers decide if they will use a partner / ISV?
+  - Do we help them decide?
+  - Do customers typically use ISV's for on-prem?
 - Do you help them script their restore?
 - What is zonal DR w.r.t. backup?
 - Do you build Runbooks as part of this VBD?
@@ -21,6 +23,7 @@
 - Do you want to backup to another region?  (ie. Site Recovery)
 - Do you need a Crash or App consistent backup?
 - What is your RPO and RTO?
+- Does the customer have their own monitoring system?
 
 ## To Do
 
