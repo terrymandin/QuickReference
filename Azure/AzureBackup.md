@@ -6,7 +6,8 @@
 - Do customers usually use file backups?
 - When do you go with a IaC approach instead of backup?
 - Do you often discuss database backups, or is it usuall IaaS?
-- How do customers decide if they will use a partner / ISV?  Is there a comparison chart?
+- How do customers decide if they will use a partner / ISV?  Do we help them decide?
+- Do you help them script their restore?
 
 ## Customer Questions
 
@@ -14,7 +15,6 @@
 - Do you have any Trusted VMs.  Trusted VMs are not configurable with Azure Site Recovery, but will with with Azure Backup Enhanced mode.
 - What are your regions?
 - Do you want to backup to another region?  (ie. Site Recovery)
-- 
 
 ## Scenarios
 
