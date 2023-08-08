@@ -8,6 +8,7 @@
 - Do you often discuss database backups, or is it usuall IaaS?
 - How do customers decide if they will use a partner / ISV?  Do we help them decide?
 - Do you help them script their restore?
+- What is zonal DR w.r.t. backup?
 
 ## Customer Questions
 
