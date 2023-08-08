@@ -6,6 +6,7 @@
 - Do customers usually use file backups?
 - When do you go with a IaC approach instead of backup?
 - Do you often discuss database backups, or is it usuall IaaS?
+- How do customers decide if they will use a partner / ISV?  Is there a comparison chart?
 
 ## Customer Questions
 
