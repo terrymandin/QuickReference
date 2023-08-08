@@ -1,5 +1,7 @@
 # Azure Backup
 
+- Recovery Services Vault is an older location.  A Backup Vault is for newer workloads.
+
 ## Q & A
 
 - When to use a bare metal or system state backup?
@@ -18,6 +20,7 @@
 - What are your regions?
 - Do you want to backup to another region?  (ie. Site Recovery)
 - Do you need a Crash or App consistent backup?
+- What is your RPO and RTO?
 
 ## To Do
 
