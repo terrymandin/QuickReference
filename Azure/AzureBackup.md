@@ -9,6 +9,7 @@
 - How do customers decide if they will use a partner / ISV?  Do we help them decide?
 - Do you help them script their restore?
 - What is zonal DR w.r.t. backup?
+- Do you build Runbooks as part of this VBD?
 
 ## Customer Questions
 
