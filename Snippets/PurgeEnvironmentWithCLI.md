@@ -33,6 +33,7 @@ az account management-group delete --name $prefix'-sandboxes'
 az account management-group delete --name $prefix'-corp'
 az account management-group delete --name $prefix'-online'
 az account management-group delete --name $prefix'-landing-zones'
+az account management-group delete --name $prefix'-landingzones'
 az account management-group delete --name $prefix'-decommissioned'
 az account management-group delete --name $prefix
 ```
