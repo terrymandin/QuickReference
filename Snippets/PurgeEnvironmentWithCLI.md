@@ -42,4 +42,18 @@ az account management-group delete --name $prefix'-landing-zones'
 az account management-group delete --name $prefix'-landingzones'
 az account management-group delete --name $prefix'-decommissioned'
 az account management-group delete --name $prefix
+
+# Portal
+az account management-group delete --name $prefix'-connectivity'
+az account management-group delete --name $prefix'-identity'
+az account management-group delete --name $prefix'-management'
+az account management-group delete --name $prefix'-platform'
+az account management-group delete --name $prefix'-sandboxes'
+az account management-group delete --name $prefix'-corp'
+az account management-group delete --name $prefix'-online'
+az account management-group delete --name $prefix'-landingzones'
+az account management-group delete --name $prefix'-decommissioned'
+az account management-group delete --name $prefix
 ```
+
+
