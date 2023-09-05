@@ -14,3 +14,7 @@ cd /mnt/c/
 ```
 wsl -l -v
 ```
+## Set Default
+```
+wsl -s Ubuntu
+```
