@@ -10,3 +10,7 @@ tmandin@DESKTOP-G4JRH9D:~$ explorer.exe .
 ```
 cd /mnt/c/
 ```
+## Version
+```
+wsl -l -v
+```
