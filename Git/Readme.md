@@ -28,6 +28,8 @@ git clone https://<gitUser>:<token>@<gitURL?.git
 git pull upstream main
 git remote -v
 git remote add upstream https://github.com/<repo>
+git pull --rebase origin main
+git pull upstream main
  ```
 type .\.git\config  // shows original repo
 
@@ -37,6 +39,14 @@ type .\.git\config  // shows original repo
 
 1. Go to: [https://cs.github.com/](https://cs.github.com/)
 2. Enter: ```repo:<name> <searchtext>```
+
+## Resolve conflicts
+```
+git pull upstream main
+```
+- Resolve conflicts
+- Stage change
+- Commit
 
 # Troubleshooting
 
