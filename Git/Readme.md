@@ -24,7 +24,8 @@ git cloning
    - Settings
    - Developer Settings
    - Generate new token
- git clone https://<gitUser>:<token>@<gitURL?.git
+git clone https://<gitUser>:<token>@<gitURL?.git
+git pull upstream main
  ```
 type .\.git\config  // shows original repo
 
