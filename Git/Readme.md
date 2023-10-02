@@ -26,6 +26,7 @@ git cloning
    - Generate new token
 git clone https://<gitUser>:<token>@<gitURL?.git
 git pull upstream main
+git remote -v
  ```
 type .\.git\config  // shows original repo
 
