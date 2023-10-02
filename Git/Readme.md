@@ -27,6 +27,7 @@ git cloning
 git clone https://<gitUser>:<token>@<gitURL?.git
 git pull upstream main
 git remote -v
+git remote add upstream https://github.com/<repo>
  ```
 type .\.git\config  // shows original repo
 
