@@ -30,7 +30,7 @@ git remote -v
 git remote add upstream https://github.com/<repo>
 git pull --rebase origin main
 git pull upstream main
-git remote set-url origin <https://NAME.git>
+git remote set-url origin <https://NAME.git>  //sets the working github repo
  ```
 type .\.git\config  // shows original repo
 
