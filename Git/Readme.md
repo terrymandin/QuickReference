@@ -49,6 +49,12 @@ git pull upstream main
 - Stage change
 - Commit
 
+## Add a tag
+```
+$ git tag <tag_name>
+$ git push origin <tag_name>
+```
+
 # Troubleshooting
 
 ## Refusing to allow a Personal Access Token
